@@ -119,7 +119,7 @@ def cmd_summary(args: argparse.Namespace) -> None:
     for r in records:
         groups.setdefault((r["model"], r["question"]), []).append(r)
 
-    print("| モデル | 質問 | 成功/試行 | 応答時間 中央値 [s] (最小〜最大) | 入力 | 出力 中央値 | 思考 中央値 | 出力 tok/s |")
+    print("| モデル | 質問 | 成功/試行 | 応答時間 中央値 [s] (最小〜最大) | 入力 | 出力 中央値 | 思考 中央値 | (出力+思考) tok/s |")
     print("|---|---|---|---|---|---|---|---|")
     for (model, qid), rs in groups.items():
         ok = [r for r in rs if r["status"] == 200]
