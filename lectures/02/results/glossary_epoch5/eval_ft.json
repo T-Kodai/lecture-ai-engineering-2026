@@ -1,0 +1,692 @@
+{
+  "summary": {
+    "condition": "ft",
+    "n": 34,
+    "seconds": 59.9,
+    "ok_rate": 0.353,
+    "seen_ok": 0.667,
+    "seen_refused": 0.0,
+    "paraphrase_ok": 0.083,
+    "paraphrase_refused": 0.0,
+    "unknown_course_ok": 0.0,
+    "unknown_course_refused": 0.0,
+    "general_ok": 0.6,
+    "general_refused": 0.0
+  },
+  "rows": [
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "homework-levels",
+      "question": "「宿題の3レベル」とは何ですか？",
+      "must_include": [
+        [
+          "基礎"
+        ],
+        [
+          "実装"
+        ],
+        [
+          "発展"
+        ]
+      ],
+      "id": "q01",
+      "condition": "ft",
+      "raw": "AIE2026の宿題の構成。基礎・中級・上級の知識・スキル・態度の3つを3段階に分けて、それぞれで考核できる。本講座では基礎レベルの宿題が1週に1つ、中級レベルの宿題が2週に1つ、上級レベルの宿題が3週に1つ。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "alias",
+      "term_id": "homework-levels",
+      "question": "AIE2026の宿題で選べる3つの段階を教えてください。",
+      "must_include": [
+        [
+          "基礎"
+        ],
+        [
+          "実装"
+        ],
+        [
+          "発展"
+        ]
+      ],
+      "id": "q02",
+      "condition": "ft",
+      "raw": "公開講座の宿題の3段階（基礎・中級・総合）。基礎は講義内容の確認、中級は演習・討論、総合はレポート・プレゼン。各段階ではレベルと内容が少し異なるので、自分の状況に合った段階を選び、その段階で取り組める範囲で作業する。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "lec-start-tag",
+      "question": "「lecNN-start タグ」とは何ですか？",
+      "must_include": [
+        [
+          "タグ"
+        ],
+        [
+          "開始",
+          "始め"
+        ]
+      ],
+      "id": "q03",
+      "condition": "ft",
+      "raw": "AIE2026の講座開始を指定するツールの名前空間。例：lecNN-start。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "alias",
+      "term_id": "lec-start-tag",
+      "question": "AIE2026の講座repoにある lec03-start は何のためのものですか？",
+      "must_include": [
+        [
+          "タグ"
+        ],
+        [
+          "開始",
+          "始め"
+        ]
+      ],
+      "id": "q04",
+      "condition": "ft",
+      "raw": "第3回の演習の開始点。lec03 は「モデルの選択と評価」とある。本講座では第3回の演習は宿題の範囲（Pydantic AIのモデル選択と評価）で、開始点の後に進める。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "default-model",
+      "question": "「既定モデル」とは何ですか？",
+      "must_include": [
+        [
+          "gemini-3.5-flash-lite"
+        ]
+      ],
+      "id": "q05",
+      "condition": "ft",
+      "raw": "AIE2026の演習と宿題で標準に使うモデルは gemini-3.5-flash-lite。無料枠のレート制限と講座運営の安定性を考えながら選ぶ。",
+      "ok": true,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "reverse",
+      "term_id": "default-model",
+      "question": "AIE2026の演習と宿題で標準に使うモデルは何ですか？",
+      "must_include": [
+        [
+          "gemini-3.5-flash-lite"
+        ]
+      ],
+      "id": "q06",
+      "condition": "ft",
+      "raw": "Gemini 3.5 Flash（第3回更新のFlash版）。第3回の更新は性能と安定性を向上させた、本講座の標準モデル。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "answer-md",
+      "question": "「answer.md」とは何ですか？",
+      "must_include": [
+        [
+          "結果",
+          "解答"
+        ],
+        [
+          "PR",
+          "プルリクエスト",
+          "提出"
+        ]
+      ],
+      "id": "q07",
+      "condition": "ft",
+      "raw": "AIE2026の演習と宿題の答えをMarkdownで書くファイル。各回の演習では question.md と answer.md を用意し、自分でチェックする。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "reverse",
+      "term_id": "answer-md",
+      "question": "AIE2026で演習・宿題の結果を書いて提出するファイルの名前は何ですか？",
+      "must_include": [
+        [
+          "answer.md"
+        ]
+      ],
+      "id": "q08",
+      "condition": "ft",
+      "raw": "aie/lecture/第X回の演習/宿題の結果.md",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "pi",
+      "question": "「Pi」とは何ですか？",
+      "must_include": [
+        [
+          "コーディングエージェント",
+          "エージェント"
+        ],
+        [
+          "ターミナル",
+          "オープンソース",
+          "MIT"
+        ]
+      ],
+      "id": "q09",
+      "condition": "ft",
+      "raw": "公開されたソフトウェアのバージョン。0.3.14 のlatest。本講座の主要なソフトウェア。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "alias",
+      "term_id": "pi",
+      "question": "Pi coding agent はどんなツールですか？",
+      "must_include": [
+        [
+          "コーディングエージェント",
+          "エージェント"
+        ],
+        [
+          "ターミナル",
+          "オープンソース",
+          "MIT"
+        ]
+      ],
+      "id": "q10",
+      "condition": "ft",
+      "raw": "Claude CodeのPiエージェント。PiのプログラムとしてClaude Codeを呼び出し、その結果をツールのreturn値で受け取る。設定ファイルのPiコマンドをどの程度読めるかは設定のレベルで大きく変わる。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "test-model",
+      "question": "「TestModel」とは何ですか？",
+      "must_include": [
+        [
+          "Pydantic"
+        ],
+        [
+          "テスト"
+        ]
+      ],
+      "id": "q11",
+      "condition": "ft",
+      "raw": "Pydantic AIのテスト用のモデル。実際のLLMではなく、テスト用のツールの返しのモデル（または生成エージェントの生成モデル）。",
+      "ok": true,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "reverse",
+      "term_id": "test-model",
+      "question": "Pydantic AIで、実際のLLMを呼ばずにエージェントをテストするための偽モデルは何ですか？",
+      "must_include": [
+        [
+          "TestModel"
+        ]
+      ],
+      "id": "q12",
+      "condition": "ft",
+      "raw": "Pydantic AIでは、LLMの実装を1つのClassにまとめるため、複数のモデルを切り替える必要がない。__init__中にモデルを指定する（model = next_available_model()）のが標準の做法。本講座では、テスト時に使用しないモデルを指定したときに、呼び出しにはない「False」と同じ挙動を返す偽モデル。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "lora",
+      "question": "「LoRA」とは何ですか？",
+      "must_include": [
+        [
+          "低ランク"
+        ],
+        [
+          "固定",
+          "凍結"
+        ]
+      ],
+      "id": "q13",
+      "condition": "ft",
+      "raw": "事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習する手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。",
+      "ok": true,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "alias",
+      "term_id": "lora",
+      "question": "Low-Rank Adaptation はどんな手法ですか？",
+      "must_include": [
+        [
+          "低ランク"
+        ],
+        [
+          "固定",
+          "凍結"
+        ]
+      ],
+      "id": "q14",
+      "condition": "ft",
+      "raw": "モデルの低ランク（例：2ビット）の周りを、その周りを使う重み矩阵を学習する手法。モデルの重みを増やしすぎない。本講座第3回の第2回演習で扱う。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "temperature",
+      "question": "「temperature」とは何ですか？",
+      "must_include": [
+        [
+          "ランダム",
+          "多様",
+          "ばらつき"
+        ]
+      ],
+      "id": "q15",
+      "condition": "ft",
+      "raw": "モデルに渡すロイティードのレベル。低いほど出力が安定し、高いほど多様になる。同じ質問でも回答が変わる理由の一つ。",
+      "ok": true,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "reverse",
+      "term_id": "temperature",
+      "question": "LLMで次のトークンを選ぶときのランダムさを調整する設定値を何と呼びますか？",
+      "must_include": [
+        [
+          "temperature",
+          "温度"
+        ]
+      ],
+      "id": "q16",
+      "condition": "ft",
+      "raw": "APIの「repeat_limit」や、Claude Desktop/Pydantic AIの「seed」や「random_state」。同じ質問でも返る文章が変わるほどその値が大きくなる。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "hallucination",
+      "question": "「ハルシネーション」とは何ですか？",
+      "must_include": [
+        [
+          "事実と異なる",
+          "存在しない",
+          "誤った",
+          "間違った"
+        ]
+      ],
+      "id": "q17",
+      "condition": "ft",
+      "raw": "LLMが事実と異なる内容や存在しない情報を、もっともらしく生成してしまう現象。モデルが知らないこと（最新情報、組織や専門家の知識で知っていること）を聞き勝手に捏造する。",
+      "ok": true,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "reverse",
+      "term_id": "hallucination",
+      "question": "LLMが事実と異なる内容をもっともらしく生成してしまう現象を何と呼びますか？",
+      "must_include": [
+        [
+          "ハルシネーション",
+          "幻覚"
+        ]
+      ],
+      "id": "q18",
+      "condition": "ft",
+      "raw": "入力文脈やツールを呼ぶ度に同じように出力が変わる、またはツールが返る結果を知らないときに起こる、内容が重要でないときに起こる、ツールが返る結果を知らないときに起こる、などがある理由で、事実と異なる内容や形式を出力にする、という行為。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "mcp",
+      "question": "「MCP（Model Context Protocol）」とは何ですか？",
+      "must_include": [
+        [
+          "プロトコル"
+        ],
+        [
+          "ツール",
+          "外部"
+        ]
+      ],
+      "id": "q19",
+      "condition": "ft",
+      "raw": "AIアプリと外部のツールやデータソースをつなぐためのオープンな標準プロトコル。MCPサーバーとして公開したツールは、エージェントの「ツール（Tool use）」として認識され、エージェントの指示で呼び出せる。本講座では第2回の宿題の第2段階で扱う。",
+      "ok": true,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "alias",
+      "term_id": "mcp",
+      "question": "Model Context Protocol について教えてください。",
+      "must_include": [
+        [
+          "プロトコル"
+        ],
+        [
+          "ツール",
+          "外部"
+        ]
+      ],
+      "id": "q20",
+      "condition": "ft",
+      "raw": "Geminiの3つのモデル（Base、Code、Code-3）を同じモデルコンテキストで扱えるように設計したプロトコル。同じ質問でBaseモデルとCodeモデルに渡すときは出力が異なるため、どのモデルに渡すか明示する仕組み。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "human-in-the-loop",
+      "question": "「Human-in-the-loop」とは何ですか？",
+      "must_include": [
+        [
+          "人"
+        ],
+        [
+          "承認",
+          "確認"
+        ]
+      ],
+      "id": "q21",
+      "condition": "ft",
+      "raw": "エージェントの処理の途中に人の確認や承認を組み込むこと。AIが処理する前に、指示を誰かに伝えるか、結果を誰かに報告させるか、またはその結果を再確認させるかをツールで表す。本講座の第2回演習では、LLMが出力する前に「確認ツール」を呼び出す、という流れを扱う。",
+      "ok": true,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "reverse",
+      "term_id": "human-in-the-loop",
+      "question": "エージェントの処理の途中に人の確認や承認を組み込むことを何と呼びますか？",
+      "must_include": [
+        [
+          "Human-in-the-loop",
+          "HITL",
+          "ヒューマン・イン・ザ・ループ",
+          "ヒューマンインザループ"
+        ]
+      ],
+      "id": "q22",
+      "condition": "ft",
+      "raw": "LLMがツールを呼び出す先頭の段階（ツール選択、呼び出し、結果の表示）において、目的の度外れな操作や重大な結果を話す前に、人の確認や承認を挟むこと。Pydantic AIでは「ツール呼び出しの中間処理（intermediate tool usage）」。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "rate-limit",
+      "question": "「レート制限」とは何ですか？",
+      "must_include": [
+        [
+          "一定時間",
+          "回数",
+          "リクエスト数"
+        ]
+      ],
+      "id": "q23",
+      "condition": "ft",
+      "raw": "一定時間あたりに呼び出せるリクエスト数やトークン数の上限。超えるとHTTP 429などのエラーが返る。無料枠は特に制限が厳しく、エージェントは1つの質問で複数回LLMを呼ぶため上限に達しやすい。",
+      "ok": true,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "alias",
+      "term_id": "rate-limit",
+      "question": "APIで429エラーが返ってくるのはどんなときですか？",
+      "must_include": [
+        [
+          "レート制限",
+          "上限",
+          "制限"
+        ]
+      ],
+      "id": "q24",
+      "condition": "ft",
+      "raw": "一定時間あたりに呼び出せるリクエスト数（例：100回）を超過したとき。一度に呼び出すAPIのレート制限。",
+      "ok": true,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "unknown_course",
+      "kind": "fictional",
+      "term_id": null,
+      "question": "AIE2026の「宿題の5レベル」とは何ですか？",
+      "must_include": [],
+      "id": "q25",
+      "condition": "ft",
+      "raw": "AIE2026の宿題の構成。基礎から応用まで、程度と内容で5つに分け、各回の演習で1レベルを達させる。本講座では第3回の演習で第3レベルを達成する。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "unknown_course",
+      "kind": "fictional",
+      "term_id": null,
+      "question": "「lecNN-end タグ」とは何ですか？",
+      "must_include": [],
+      "id": "q26",
+      "condition": "ft",
+      "raw": "AIE2026の講座演習の続き（lecNN-end）。第1回（lecNN-start）とは対照に、演習内容と進め方、宿題とチェックが明確に書かれた教材。本講座ではlecNN-startからlecNN-endまでを1回のログインで進め、終わったらlecNN-endで自分の成果を評価する。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "unknown_course",
+      "kind": "fictional",
+      "term_id": null,
+      "question": "「answer.yaml」とは何ですか？",
+      "must_include": [],
+      "id": "q27",
+      "condition": "ft",
+      "raw": "AIE2026の演習と宿題の解答基準。各回の演習で同じanswer.yamlを使うので、同じ题型の解答が同じ形状になる。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "unknown_course",
+      "kind": "fictional",
+      "term_id": null,
+      "question": "AIE2026の「週次リフレクションシート」とは何ですか？",
+      "must_include": [],
+      "id": "q28",
+      "condition": "ft",
+      "raw": "第4回の演習で、自分の学習状況と進捗を1週間程度に絞って振り返る作業。AIE2026では週に3回（土・日・水）があり、回数を数えて点数を計算できる。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "unknown_course",
+      "kind": "fictional",
+      "term_id": null,
+      "question": "「Quriポイント」とは何ですか？",
+      "must_include": [],
+      "id": "q29",
+      "condition": "ft",
+      "raw": "LLMが質問の内容に依るほど正確に答えるように設計した評価指標。質問に合うほど出力が正しい、違えば少し違う。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "general",
+      "kind": "not_in_glossary",
+      "term_id": null,
+      "question": "「RAG」とは何ですか？",
+      "must_include": [
+        [
+          "検索"
+        ]
+      ],
+      "id": "q30",
+      "condition": "ft",
+      "raw": "LLMが外部の知識やデータソースを直接読み込むのではなく、モデルに渡す前提文（Prompt）をデータベースやウェブサイトなどにある先導文（リソース）に書き、モデルが読むようにする技術。モデルが実際に利用するのは、その先導文と、その中で検索した結果（または引用）の2つだけになる。",
+      "ok": true,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "general",
+      "kind": "not_in_glossary",
+      "term_id": null,
+      "question": "「Transformer」とは何ですか？",
+      "must_include": [
+        [
+          "注意",
+          "Attention",
+          "アテンション"
+        ]
+      ],
+      "id": "q31",
+      "condition": "ft",
+      "raw": "代表的なLLMの構成器。自らの出力を次のトークンにするロジック（予測）と、入力を履歴（回数の増分）で理解する（回帰）两つの部分を結合したものだ。2017年に公開された基盤モデルはPiattaformeのBaseTransformer。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "general",
+      "kind": "not_in_glossary",
+      "term_id": null,
+      "question": "「埋め込み（embedding）」とは何ですか？",
+      "must_include": [
+        [
+          "ベクトル"
+        ]
+      ],
+      "id": "q32",
+      "condition": "ft",
+      "raw": "モデルに渡す入力で、文章の意味を数値で表す仕組み。同じ意味の文章でも入力不同く渡すことで、同じ質問に答えるように設計されている。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "general",
+      "kind": "not_in_glossary",
+      "term_id": null,
+      "question": "「Docker」とは何ですか？",
+      "must_include": [
+        [
+          "コンテナ"
+        ]
+      ],
+      "id": "q33",
+      "condition": "ft",
+      "raw": "仮想環境として通用するコンテナ。容器をコピーするコマンドは docker cp であり、コピーした内容を見せるコマンドは docker exec -it 2>&1 docker ps 3 である。本講座では第1回演習では docker cp を使う。",
+      "ok": true,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "general",
+      "kind": "not_in_glossary",
+      "term_id": null,
+      "question": "「勾配降下法」とは何ですか？",
+      "must_include": [
+        [
+          "勾配"
+        ],
+        [
+          "最小",
+          "小さく",
+          "減ら"
+        ]
+      ],
+      "id": "q34",
+      "condition": "ft",
+      "raw": "LLMが学習する重みを、1つのトークンあたりに均等に分散させること。モデルの重みを小さくする（データで、プロンプトで、ツールで、回で）のが、回数を減らすための主要な勾配降下法。",
+      "ok": true,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# 演習ノートブックの学習セル（セクション 4）の実行時の表示から、学習に関する行だけを抜き出したもの
+# 実行: 2026-11-01、Apple M5（MPS）、torch 2.15.0。result.json には学習時間と loss が保存されないため、ここに残す
+trainable params: 6,389,760 || all params: 758,782,784 || trainable%: 0.8421
+{'loss': '1.556', 'learning_rate': '0.0001962', 'entropy': '1.832', 'num_tokens': '1.786e+04', 'mean_token_accuracy': '0.6899', 'epoch': '5'}
+{'loss': '0.08469', 'learning_rate': '0.0001361', 'entropy': '0.1752', 'num_tokens': '3.572e+04', 'mean_token_accuracy': '0.9846', 'epoch': '10'}
+{'loss': '0.01833', 'learning_rate': '4.736e-05', 'entropy': '0.0433', 'num_tokens': '5.358e+04', 'mean_token_accuracy': '0.996', 'epoch': '15'}
+{'loss': '0.01387', 'learning_rate': '4.266e-07', 'entropy': '0.03046', 'num_tokens': '7.144e+04', 'mean_token_accuracy': '0.9963', 'epoch': '20'}
+{'train_runtime': '183.3', 'train_samples_per_second': '1.528', 'train_steps_per_second': '0.218', 'train_loss': '0.4183', 'epoch': '20'}
+学習時間: 183 秒 | ステップ数: 40 | エポック: 20.0

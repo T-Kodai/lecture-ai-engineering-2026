@@ -1,0 +1,692 @@
+{
+  "summary": {
+    "condition": "base",
+    "n": 34,
+    "seconds": 174.5,
+    "ok_rate": 0.088,
+    "seen_ok": 0.083,
+    "seen_refused": 0.0,
+    "paraphrase_ok": 0.0,
+    "paraphrase_refused": 0.0,
+    "unknown_course_ok": 0.0,
+    "unknown_course_refused": 0.0,
+    "general_ok": 0.4,
+    "general_refused": 0.0
+  },
+  "rows": [
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "homework-levels",
+      "question": "「宿題の3レベル」とは何ですか？",
+      "must_include": [
+        [
+          "基礎"
+        ],
+        [
+          "実装"
+        ],
+        [
+          "発展"
+        ]
+      ],
+      "id": "q01",
+      "condition": "base",
+      "raw": "「宿題の 3 レベル」とは、**学習の進捗やレベルを 3 つの段階に分けて示す方法**です。これは、単一の目標を達成するだけでなく、段階的に進めていくプロセスや、達成した成果を評価する基準として使われることが多く、特に**「学習の進捗管理」**や**「学習成果の評価」**において非常に有用です。\n\n一般的に、この 3 段階は以下のようになります。\n\n### 1. 基本レベル（基礎的な学習）\nこのレベルは、学習の**基礎知識**や**基本概念**を掌握する段階です。\n*   **内容**: 基本的な定義、公式、定理、用語の理解。\n*   **目的**: 学習",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "alias",
+      "term_id": "homework-levels",
+      "question": "AIE2026の宿題で選べる3つの段階を教えてください。",
+      "must_include": [
+        [
+          "基礎"
+        ],
+        [
+          "実装"
+        ],
+        [
+          "発展"
+        ]
+      ],
+      "id": "q02",
+      "condition": "base",
+      "raw": "AIE（アーツ・イン・エデュケーション）の宿題として、最も重視されるのは**「実務経験の活用」**と**「課題解決の質」**です。\n\nAIE 2026 の目標は、単なる知識の詰め込みではなく、**「現場の課題を解決する能力」**を磨くことです。そのため、選べる 3 つの段階は以下の通りです。\n\n### 1. 実務経験の活用（Project-Based Learning）\nこの段階は、実際に現場やプロジェクトで働いて、課題を解決するプロセスを学ぶものです。\n*   **内容**: 実際のプロジェクト（例：企業内プロジェクト、社会課題、あるいは AIE のプロジェクト）に参加し、その中で学んだ知識を",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "lec-start-tag",
+      "question": "「lecNN-start タグ」とは何ですか？",
+      "must_include": [
+        [
+          "タグ"
+        ],
+        [
+          "開始",
+          "始め"
+        ]
+      ],
+      "id": "q03",
+      "condition": "base",
+      "raw": "「lecNN-start」は、**LeetCode（リテール・コード・ネスト）の「LeetCode」のスタートアッププロジェクト**です。\n\nこのプロジェクトは、LeetCode の開発者コミュニティ（GitHub）を運営する「LeetCode 株式会社」が、2024 年 1 月 1 日に設立したものです。主な目的は、LeetCode の開発者コミュニティをより広く、かつ質の高いコミュニティに引き込むことで、LeetCode の発展と活発な開発活動を促進することです。\n\nこのプロジェクトは、以下の目的で活動しています：\n*   LeetCode の開発者コミュニティの拡大と活性化\n*   LeetCode の開発者コミュニティの質を高める\n*   LeetCode の開発者コミュニティの",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "alias",
+      "term_id": "lec-start-tag",
+      "question": "AIE2026の講座repoにある lec03-start は何のためのものですか？",
+      "must_include": [
+        [
+          "タグ"
+        ],
+        [
+          "開始",
+          "始め"
+        ]
+      ],
+      "id": "q04",
+      "condition": "base",
+      "raw": "AIE2026 の講座「lec03-start」は、**「学習の開始（または初期設定）」**という目的で用意されたものです。\n\n具体的には、以下の 3 つの目的で使われます。\n\n1.  **学習の開始**\n    *   学習の開始画面（Start Screen）を表示し、学習の開始ボタンを押すことで、学習を開始します。\n2.  **初期設定**\n    *   学習の初期設定画面（Initial Setup Screen）を表示し、学習の初期設定ボタンを押すことで、学習の初期設定を行います。\n3.  **学習の開始**\n    *   学習の開始画面（Start Screen）と初期設定画面（Initial Setup Screen）の両方を",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "default-model",
+      "question": "「既定モデル」とは何ですか？",
+      "must_include": [
+        [
+          "gemini-3.5-flash-lite"
+        ]
+      ],
+      "id": "q05",
+      "condition": "base",
+      "raw": "「既定モデル」とは、**「既知のデータやルールに基づいて構築された、特定の形式や構造を持つモデル」**を指します。\n\nこの概念は主に以下のような背景で使われます：\n\n*   **機械学習の初期段階**：データが不足している場合、学習アルゴリズム（例えば、ニューラルネットワークや決定木）を構築する際に、事前に定義されたルールやパターンに基づいて学習するモデルを指します。\n*   **データセットの定義**：特定の分野（例：医療診断、金融分析、交通制御）において、特定のルールやシナリオに基づいて設計されたモデルを指します。\n*   **システム設計**：既存のシステムや既存の技術の基盤として、特定の機能や動作を規定",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "reverse",
+      "term_id": "default-model",
+      "question": "AIE2026の演習と宿題で標準に使うモデルは何ですか？",
+      "must_include": [
+        [
+          "gemini-3.5-flash-lite"
+        ]
+      ],
+      "id": "q06",
+      "condition": "base",
+      "raw": "AIE2026（AI 教育 2026）の演習と宿題では、**「標準に使うモデル」**は、以下の 3 つの選択肢が一般的に推奨されています。\n\nそれぞれの選択肢について、学習目的や環境に合わせて使い分けると良いでしょう。\n\n### 1. 標準的な大規模言語モデル（LLM）\n最も一般的な選択肢です。\n*   **特徴**: 文脈理解、計算能力、多言語対応が非常に高いです。\n*   **適用例**:\n    *   **AIE2026 の演習**: 問題文の理解、論理的な推論、長文の読解など、文脈を深く理解する際に使われます。\n    *   **",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "answer-md",
+      "question": "「answer.md」とは何ですか？",
+      "must_include": [
+        [
+          "結果",
+          "解答"
+        ],
+        [
+          "PR",
+          "プルリクエスト",
+          "提出"
+        ]
+      ],
+      "id": "q07",
+      "condition": "base",
+      "raw": "**`answer.md`** は、**AI（人工知能）の回答生成や回答の検証**において非常に重要なファイルです。\n\nこのファイルは、AI が特定の質問やタスクに対して回答を生成した際に、その回答が**正しいか、適切か、または誤解を招く可能性があるか**を自動でチェックするものです。\n\n主な機能と目的は以下の通りです：\n\n1.  **回答の検証（Verification）**\n    AI が生成した回答に対して、人間が確認できるかどうかを判断します。例えば、AI が「この問題を解く方法」を提案し、人間がそれを確認し、実際に問題に答えるかどうかを確認します。\n\n2.  **誤解の防止（Prevention of Misunderstanding）**",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "reverse",
+      "term_id": "answer-md",
+      "question": "AIE2026で演習・宿題の結果を書いて提出するファイルの名前は何ですか？",
+      "must_include": [
+        [
+          "answer.md"
+        ]
+      ],
+      "id": "q08",
+      "condition": "base",
+      "raw": "AIE2026（アイルランド国立大学）の演習・宿題の提出書類（レポート）は、**「AIE2026」**という文字列で保存・提出するのが一般的です。\n\nただし、いくつかの注意点と推奨事項があります：\n\n1.  **ファイル名**：\n    *   通常は `AIE2026` または `AIE2026-Report` などの形式で保存します。\n    *   必ずこの文字列をファイル名にしてください。\n\n2.  **提出方法**：\n    *   AIE2026 の公式ウェブサイト（`aie2026.ac.uk`）または公式の提出システム（通常は `a",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "pi",
+      "question": "「Pi」とは何ですか？",
+      "must_include": [
+        [
+          "コーディングエージェント",
+          "エージェント"
+        ],
+        [
+          "ターミナル",
+          "オープンソース",
+          "MIT"
+        ]
+      ],
+      "id": "q09",
+      "condition": "base",
+      "raw": "「Pi」とは、**円周率**（π）を指します。\n\nこれは、円が中心に点状に点印を印をつけて描いたとき、その円の周長と半径の比を表す数値です。\n\n*   **定義**: $\\pi = \\frac{2 \\pi}{3}$\n*   **値**: 約 3.14159265...\n*   **用途**: 数学、物理学、工学などの分野で、円形物体の性質や、円周率の計算に使われます。\n\n「Pi」という言葉は、英語の「Pi」の由来です。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "alias",
+      "term_id": "pi",
+      "question": "Pi coding agent はどんなツールですか？",
+      "must_include": [
+        [
+          "コーディングエージェント",
+          "エージェント"
+        ],
+        [
+          "ターミナル",
+          "オープンソース",
+          "MIT"
+        ]
+      ],
+      "id": "q10",
+      "condition": "base",
+      "raw": "**Pi Coding Agent** は、主に **Python** を主要なプログラミング言語として使った、**AI によるコード生成・実行・分析**を行うツールです。\n\n従来のコード生成ツール（例：Codecademy や CodePen）とは異なり、AI が「コードを生成し、それを実行して結果を出力する」プロセスを自動化・最適化しています。\n\n主な特徴と機能は以下の通りです。\n\n### 1. 主な機能\n*   **コード生成**: 特定の目的（例：特定のアルゴリズムを実行する、特定のデータ処理を行う）に対して、AI がコードを自動で生成します。\n*   **実行環境構築**: 生成したコードを実行するための環境（Python 環境、仮想環境など）を自動",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "test-model",
+      "question": "「TestModel」とは何ですか？",
+      "must_include": [
+        [
+          "Pydantic"
+        ],
+        [
+          "テスト"
+        ]
+      ],
+      "id": "q11",
+      "condition": "base",
+      "raw": "**TestModel** は、主に**テストモデル（Test Model）**という用語で、主に**AI 開発・学習における「テストデータ」または「テストセット」**を指します。\n\n具体的には、以下の 2 つの側面から考えられます。\n\n1.  **AI 学習における「テストデータ」**\n    *   学習モデル（例えば、機械学習のモデル）が訓練された後、実際のデータ（テストデータ）を使って、そのモデルがどのように動作するかを評価する際に使われるものです。\n    *   例：「このモデルは、この画像を認識する能力は高いでしょうか？」という質問に対して、実際に学習したモデルが回答する結果をテストモデルとして確認します。\n\n2.  **特定のサービスやプラットフォームの",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "reverse",
+      "term_id": "test-model",
+      "question": "Pydantic AIで、実際のLLMを呼ばずにエージェントをテストするための偽モデルは何ですか？",
+      "must_include": [
+        [
+          "TestModel"
+        ]
+      ],
+      "id": "q12",
+      "condition": "base",
+      "raw": "Pydantic AI で、実際の LLM を呼ばずにエージェントをテストするための偽モデルは、**「Pydantic の `generate` 関数」を呼び出して生成されたテキスト**です。\n\nPydantic AI は、LLM を直接呼び出すのではなく、`generate` 関数を使って、ユーザーの定義されたタスク（例：「ユーザーが提出した質問に対して、AI が回答する文書」など）を生成するモデルです。この生成された出力が、実際の LLM と同等の品質で回答されることを保証するため、この出力をテスト用として使用します。\n\n具体的には、以下のコードのような形式で使われます。\n\n```python\nfrom pydantic_ai import PydanticAI\n\n# 実際の LLM を",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "lora",
+      "question": "「LoRA」とは何ですか？",
+      "must_include": [
+        [
+          "低ランク"
+        ],
+        [
+          "固定",
+          "凍結"
+        ]
+      ],
+      "id": "q13",
+      "condition": "base",
+      "raw": "**LoRA** は、大規模言語モデル（LLM）のトレーニングにおいて非常に重要な技術の一つです。\n\n簡単に言うと、**「ローカルなモデル（小さなモデル）を、大規模なモデル（大きなモデル）に追加して、より高い精度や表現力を得るための手法」**です。\n\n具体的には、以下の 3 つのステップで考えられます：\n\n1.  **ローカルモデルの作成**：\n    研究者が、特定の分野（例：数学、言語、科学）に特化した、非常に小さなモデルを作成します。このモデルは、大規模モデルに比べて計算コストが非常に低く、学習速度も速いです。\n\n2.  **LoRA の導入**：\n    大規模モデル（例えば GPT",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "alias",
+      "term_id": "lora",
+      "question": "Low-Rank Adaptation はどんな手法ですか？",
+      "must_include": [
+        [
+          "低ランク"
+        ],
+        [
+          "固定",
+          "凍結"
+        ]
+      ],
+      "id": "q14",
+      "condition": "base",
+      "raw": "**Low-Rank Adaptation (LR)** は、主に**機械学習**（特に Deep Learning）において、**低秩（Low-Rank）**なモデルを、**高い精度**で適用する手法です。\n\nこの手法の核心は、モデルの構造を「低秩」として認識し、その構造を学習することで、より多くのデータに対して高い精度を維持する点にあります。\n\n### 1. 基本の考え方\n一般的に、モデルは「高秩（High-Rank）」であることが多いですが、現実のデータや複雑な問題では、その構造が「低秩（Low-Rank）」であることが多いです。\n\nLR 手法は、以下の 2 つのステップで動作します。\n\n*   **ステップ 1: 低秩",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "temperature",
+      "question": "「temperature」とは何ですか？",
+      "must_include": [
+        [
+          "ランダム",
+          "多様",
+          "ばらつき"
+        ]
+      ],
+      "id": "q15",
+      "condition": "base",
+      "raw": "「temperature」は、**温度**（熱の強さや状態）を意味します。\n\nこの言葉は英語の「temperature」の直訳で、主に以下の意味で使われます：\n\n*   **物理的・化学的状態**: 物質の分子の運動や熱エネルギーの分布を表す。例：氷の温度（0°C）、水蒸気（100°C）、人体の体温（37°C）。\n*   **気象・環境**: 気候や気圧の状態を表す。例：晴れ（clear）、雨（rain）、熱帯（hot）。\n*   **ビジネス・マーケティング**: 商品やサービスの価格や価値を指す。例：高級車（luxury car）、高価なサービス（",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "reverse",
+      "term_id": "temperature",
+      "question": "LLMで次のトークンを選ぶときのランダムさを調整する設定値を何と呼びますか？",
+      "must_include": [
+        [
+          "temperature",
+          "温度"
+        ]
+      ],
+      "id": "q16",
+      "condition": "base",
+      "raw": "LLM（大規模言語モデル）で次のトークンを選ぶときのランダムさを調整する設定値は、**ロジックランダム性（Logic Randomness）**、あるいは**ロジックランダム性（Logic Randomness）**と呼ばれます。\n\nこの設定は、モデルが「特定の順序で出力する」のではなく、「すべての可能性（出力の組み合わせ）の中から、ランダムに一つを選ぶ」ことを保証するものです。\n\n具体的には、以下の 3 つの要素が組み合わさってこの設定を実現します。\n\n1.  **出力の組み合わせ（Output Space）**：モデルが生成するテキストのすべての可能状態（出力の組み合わせ）を定義します。\n2.  **ランダム性（Randomness）**：この出力の組み合わせの中から、どれか",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "hallucination",
+      "question": "「ハルシネーション」とは何ですか？",
+      "must_include": [
+        [
+          "事実と異なる",
+          "存在しない",
+          "誤った",
+          "間違った"
+        ]
+      ],
+      "id": "q17",
+      "condition": "base",
+      "raw": "**ハルシネーション**（Hārinēshō）は、日本語で「**ハルシネーション**」です。\n\nこの言葉は、主に**物理学**（特に光の現象）や**音楽学**（特に弦楽器の音）において使われます。\n\n*   **物理学の定義**: 光の波が媒質（空気、水など）を通過する際、波の振幅が媒質の密度や温度によって変化し、波の長さが変化する現象です。\n    *   例：太陽光が空気中に進むと、波長が短くなり、波の振幅が小さくなります。\n    *   例：水波が波紋を形成する際、波の振幅が波",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "reverse",
+      "term_id": "hallucination",
+      "question": "LLMが事実と異なる内容をもっともらしく生成してしまう現象を何と呼びますか？",
+      "must_include": [
+        [
+          "ハルシネーション",
+          "幻覚"
+        ]
+      ],
+      "id": "q18",
+      "condition": "base",
+      "raw": "LLM（大規模言語モデル）が事実と異なる内容をもっともらしく生成してしまう現象を、**「フィクション化（Fictionalization）」**と呼びます。\n\nこれは、モデルが「事実上の情報」をそのままそのままに出力するのではなく、その事実を**「物語の要素（キャラクターの性格、背景、感情など）」として解釈・再構成**し、より自然で魅力的な表現に変換するプロセスです。\n\n具体的には、以下の 3 つの側面から考えられます。\n\n1.  **事実の再構築**：\n    元の事実（例：「2024 年 1 月 1 日、東京で地震が発生しました」）を、物語の「恐怖」や「緊張",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "mcp",
+      "question": "「MCP（Model Context Protocol）」とは何ですか？",
+      "must_include": [
+        [
+          "プロトコル"
+        ],
+        [
+          "ツール",
+          "外部"
+        ]
+      ],
+      "id": "q19",
+      "condition": "base",
+      "raw": "**MCP（Model Context Protocol）** は、大規模言語モデル（LLM）や AI 技術において、**「モデルの出力を人間が理解しやすく、かつ、ユーザーの意図を正確に伝達できる仕組み」**を指します。\n\n従来の AI 技術では、モデルが出力した文書やコードは、人間がそのまま読んだり、理解したりすることが困難でした。MCP は、この「理解の壁」を解消するために開発されたプロトコルです。\n\n主な特徴と機能は以下の通りです。\n\n### 1. 人間とモデルの間の「翻訳」\nMCP には、**「モデルの出力を人間に翻訳する機能」**が含まれています。\n*   **例**: 大規模言語モデル",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "alias",
+      "term_id": "mcp",
+      "question": "Model Context Protocol について教えてください。",
+      "must_include": [
+        [
+          "プロトコル"
+        ],
+        [
+          "ツール",
+          "外部"
+        ]
+      ],
+      "id": "q20",
+      "condition": "base",
+      "raw": "**Model Context Protocol (MCP)** は、大規模 AI モデル（特に大規模言語モデル）のトレーニングや実行において、ユーザーが「何を教えるか」「何を回答させるか」を明確に定義し、モデルがその情報を処理する仕組みを定義するプロトコルです。\n\n特に、**Google の Gemini** や **Microsoft Copilot** などの大規模モデルが、ユーザーの質問に対して「なぜそうなるのか」「その理由を説明する」などの回答を生成する際、MCP を使用しています。\n\n以下に、MCP の基本概念、主な特徴、そして具体的な応用例を解説します。\n\n### 1. MCP の基本概念\nMCP は、単に「質問を返す」だけでなく、**",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "human-in-the-loop",
+      "question": "「Human-in-the-loop」とは何ですか？",
+      "must_include": [
+        [
+          "人"
+        ],
+        [
+          "承認",
+          "確認"
+        ]
+      ],
+      "id": "q21",
+      "condition": "base",
+      "raw": "**Human-in-the-loop（人間介入型・人間参加型）**とは、ソフトウェアやシステムが人間が直接操作・制御するのではなく、人間がシステムを操作する**「人間とシステムが連携して動作する」**プロセスを指します。\n\nこの概念は主に**ソフトウェア開発**や**システム設計**において、以下の 3 つの要素を組み合わせて使われます。\n\n### 1. 基本定義\nシステムが人間が直接操作するのではなく、人間がシステムを操作する**「人間とシステムが連携して動作する」**プロセスを指します。\n*   **人間**: 操作主体（ユーザーや開発者）\n*   **システム**: 操作対象（ソフトウェアやアルゴリズム）\n*   **連携**: 人間がシステムを",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "reverse",
+      "term_id": "human-in-the-loop",
+      "question": "エージェントの処理の途中に人の確認や承認を組み込むことを何と呼びますか？",
+      "must_include": [
+        [
+          "Human-in-the-loop",
+          "HITL",
+          "ヒューマン・イン・ザ・ループ",
+          "ヒューマンインザループ"
+        ]
+      ],
+      "id": "q22",
+      "condition": "base",
+      "raw": "エージェントの処理の途中に人の確認や承認を組み込むことを、**「承認フロー（Approval Flow）」**と呼びます。\n\nこれは、AI や機械学習モデルが学習・訓練・実行された後、人間が最終的な判断や承認を行うプロセスを指します。具体的には、以下のステップが含まれます：\n\n1.  **承認フローの定義**：AI が学習したルールや知識に基づいて判断し、その結果を人間に提示する段階。\n2.  **承認フローの仕組み**：AI が判断した結果を人間に提示し、人間がその結果を「同意」または「拒否」する段階。\n3.  **承認フローの目的**：AI が学習した知識やルールに基づいて判断し、その結果",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "seen",
+      "kind": "same_template",
+      "term_id": "rate-limit",
+      "question": "「レート制限」とは何ですか？",
+      "must_include": [
+        [
+          "一定時間",
+          "回数",
+          "リクエスト数"
+        ]
+      ],
+      "id": "q23",
+      "condition": "base",
+      "raw": "**レート制限**（Rate Limiting）とは、サーバー側やネットワーク側で、特定のユーザーやサービスに対して、一定期間や一定回数以内の通信・アクセスを許容する仕組みのことです。\n\nこの制限は主に以下の目的で導入されます：\n\n*   **セキュリティ対策**：攻撃者がサーバーに大量のデータを送信し、サーバーの負荷を過大に押し上げたり、不正な操作を助長したりするのを防ぎます。\n*   **サービス安定化**：サーバーの処理能力を確保し、ユーザー体験を維持するために必要な負荷を管理します。\n*   **プライバシー保護**：ユーザーの通信データを収集し、不当に利用するのを防ぐためです。\n\n一般的に、レート制限は以下の 3",
+      "ok": true,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "paraphrase",
+      "kind": "alias",
+      "term_id": "rate-limit",
+      "question": "APIで429エラーが返ってくるのはどんなときですか？",
+      "must_include": [
+        [
+          "レート制限",
+          "上限",
+          "制限"
+        ]
+      ],
+      "id": "q24",
+      "condition": "base",
+      "raw": "API で **429（Too Many Requests）** エラーが返ってくる主な理由は、**「ユーザーが一度に大量にアクセスしようとしたが、サーバーが許容できない」**という状態です。\n\nこのエラーが発生する具体的なケースは以下の通りです。\n\n### 1. 頻度が高いユーザーからの大量アクセス\n最も一般的な原因は、特定のユーザー（または特定の IP アドレス）が、一度に大量の API 呼び出しを試していることです。\n*   **例:** 特定のユーザーが 100 回以上、または 1000 回以上、あるいは 10,000 回以上、あるいは 100,000 回以上、あるいは 100,000,0",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "unknown_course",
+      "kind": "fictional",
+      "term_id": null,
+      "question": "AIE2026の「宿題の5レベル」とは何ですか？",
+      "must_include": [],
+      "id": "q25",
+      "condition": "base",
+      "raw": "AIE2026（アイルランド・イギリス・アメリカ・ヨーロッパ・アジア・オーストラリア・アジア太平洋地域）の「宿題の 5 レベル」は、**「学習の質と成果のレベル」**を評価するための指標です。\n\nこの 5 段階は、単に「テストの答えが正か」だけでなく、**「学習プロセスの深さ」「理解の質」「実務への応用能力」**を測るためのものです。\n\n具体的には以下の 5 つのレベルから構成されています。\n\n### 1. 基礎レベル (Basic Level)\n*   **特徴**: 学習者が基礎的な知識や概念を覚える段階です。\n*   **評価基準**: 問題の文脈や",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "unknown_course",
+      "kind": "fictional",
+      "term_id": null,
+      "question": "「lecNN-end タグ」とは何ですか？",
+      "must_include": [],
+      "id": "q26",
+      "condition": "base",
+      "raw": "**「lecNN-end タグ」**は、主に**機械学習（特に自然言語処理や画像認識）における「学習済みネットワーク（学習済みモデル）」の末尾部分**を指す用語です。\n\nこの用語は、学習されたモデルの出力結果（出力ベクトル）を、特定の目的（例：検索、分類、画像の特定など）に合わせて、**「lecNN-end」という短い文字列**に変換して表示する際に使われるものです。\n\n### 具体的な仕組みと用途\n\n1.  **学習済みモデルの出力**\n    学習されたモデル（例えば、Google の「BERT」や「RoBERTa」など）が、入力文や画像を処理し、最終的な出力ベクトル（出力結果）",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "unknown_course",
+      "kind": "fictional",
+      "term_id": null,
+      "question": "「answer.yaml」とは何ですか？",
+      "must_include": [],
+      "id": "q27",
+      "condition": "base",
+      "raw": "**answer.yaml** は、**Answering Machine** という AI 言語モデル（通常は Qwen3.5 など）のトレーニングデータセットの構成ファイルです。\n\nこのファイルは、モデルが学習する「質問と答え」のペアを定義するものです。具体的には、以下の構成要素が含まれます：\n\n1.  **質問 (Question)**: 学習対象となる問題の文脈です。\n2.  **回答 (Answer)**: 問題に対する正確な答えや、モデルが出力した回答です。\n\nこのファイルは、モデルの学習プロセスにおいて、学習データとして使用されるため、トレーニング期間や学習アルゴリズムの調整に直接影響を与えます。\n\n*   **用途**: 大規模言語モデル（LLM）のトレーニング",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "unknown_course",
+      "kind": "fictional",
+      "term_id": null,
+      "question": "AIE2026の「週次リフレクションシート」とは何ですか？",
+      "must_include": [],
+      "id": "q28",
+      "condition": "base",
+      "raw": "AIE2026（アイルランド・イギリス・アメリカ・ヨーロッパ・アジア・オーストラリア・アジア太平洋地域）の「週次リフレクションシート」は、**「週次リフレクションシート（Weekly Reflection Sheet）」**を指します。\n\nこれは、アイルランド・イギリス・アメリカ・ヨーロッパ・アジア・オーストラリア・アジア太平洋地域（AIE2026）の**「アイルランド・イギリス・アメリカ・ヨーロッパ・アジア・オーストラリア・アジア太平洋地域（AIE2026）」**の国際的な教育・研究・文化・ビジネス・スポーツ・芸術・科学・技術・文化・スポーツ・芸術・科学・技術・文化・スポーツ・芸術・科学・",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "unknown_course",
+      "kind": "fictional",
+      "term_id": null,
+      "question": "「Quriポイント」とは何ですか？",
+      "must_include": [],
+      "id": "q29",
+      "condition": "base",
+      "raw": "「Quriポイント」は、**Quri（クリー）** というゲームやサービスにおいて、ユーザーが購入した商品やサービスに対して得られる**ポイント**のことで、主に以下の用途で使用されます。\n\n主な特徴は以下の通りです：\n\n*   **購入後のポイント還元**：ゲーム内での購入（ショップ、クエスト、イベントなど）で得られるポイントが、購入したアイテムやサービスに直接還元される仕組みです。\n*   **ポイントの活用**：得られたポイントを使って、ゲーム内のアイテムを買い、新しいクエストやイベントに参加し、さらにポイントを獲得するサイクルを形成します。\n*   **ポイントの価値**：ポイント自体はゲーム内通貨として扱われ、特定のアイテムやサービスに換算されるため、価値が異なります。",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "general",
+      "kind": "not_in_glossary",
+      "term_id": null,
+      "question": "「RAG」とは何ですか？",
+      "must_include": [
+        [
+          "検索"
+        ]
+      ],
+      "id": "q30",
+      "condition": "base",
+      "raw": "**RAG** は、**R**eading **A**ll **G**enerated **G**eneration（生成された生成）の略です。\n\nこれは、大規模言語モデル（LLM）や AI によって生成されたテキストを、**検索エンジン（検索エンジン）**や**検索データベース**に保存し、ユーザーが検索する際に、その検索結果を**再読み込み（Re-reading）**して回答する技術です。\n\nこの技術の核心は以下の 3 つの要素が組み合わさっているためです。\n\n1.  **検索エンジン（検索データベース）**：\n    AI が生成した文書や知識を、検索エンジンに保存します。\n2.  **再読み込み（Re-reading）**：",
+      "ok": true,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "general",
+      "kind": "not_in_glossary",
+      "term_id": null,
+      "question": "「Transformer」とは何ですか？",
+      "must_include": [
+        [
+          "注意",
+          "Attention",
+          "アテンション"
+        ]
+      ],
+      "id": "q31",
+      "condition": "base",
+      "raw": "**Transformer** は、**大規模言語モデル（LLM）**の核心となる技術の一つです。\n\n簡単に言うと、**「文脈を理解し、自然な日本語で説明する能力」**を備えた新しい学習モデルです。従来の機械学習モデル（例えば、ニューラルネットワークやディープラーニング）では、文脈を考慮して情報を処理するのではなく、単に「入力 → 出力」の直線的な計算を行っていました。\n\nでは、なぜ Transformer が注目されているのか、その理由と仕組みを解説します。\n\n### 1. 従来のモデルとの違い\n*   **従来のモデル（例：BERT, RoBERTa）**: 文脈を考慮して単語の位置や順序を分析するモデルです。\n*   **Transformer",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "general",
+      "kind": "not_in_glossary",
+      "term_id": null,
+      "question": "「埋め込み（embedding）」とは何ですか？",
+      "must_include": [
+        [
+          "ベクトル"
+        ]
+      ],
+      "id": "q32",
+      "condition": "base",
+      "raw": "**埋め込み（embedding）**とは、テキストや画像などの**自然言語データ**を、**機械学習モデル**に直接入力する際に、**「単語の文脈や意味を表現する、短く表現された文字列」**のことです。\n\nこのデータは、テキストベースの AI（Chatbot、翻訳、画像生成など）に非常に効果的です。なぜなら、モデルは「単語」ではなく、**「意味」**を学習しているため、単語を個別に入力すると、意味が異なる単語が混ざり合い、結果がズレたり、誤解されたりするからです。\n\n### 埋め込みの仕組みと特徴\n\n1.  **意味の代替**\n    単に「apple」や「banana」を文字列",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "general",
+      "kind": "not_in_glossary",
+      "term_id": null,
+      "question": "「Docker」とは何ですか？",
+      "must_include": [
+        [
+          "コンテナ"
+        ]
+      ],
+      "id": "q33",
+      "condition": "base",
+      "raw": "**Docker** は、**「Dockerfile」の略称**です。\n\nこれは、Linux 環境において、**コンテナ（Container）**を構築するためのツールです。コンテナとは、OS の環境を完全に切り替えることなく、特定のアプリケーションやサービスを実行するための小さな、独立した「容器」のことです。\n\nDocker は、以下の 3 つの主要な機能を備えています：\n\n1.  **コンテナの構築**：\n    Dockerfile を利用して、アプリケーションを構築し、そのコンテナを生成します。\n    ```bash\n    docker build -t myapp:latest .\n    ```\n\n2.  **コンテナの起動**：\n    構築されたコンテナを起動し、その環境を起動",
+      "ok": true,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    },
+    {
+      "category": "general",
+      "kind": "not_in_glossary",
+      "term_id": null,
+      "question": "「勾配降下法」とは何ですか？",
+      "must_include": [
+        [
+          "勾配"
+        ],
+        [
+          "最小",
+          "小さく",
+          "減ら"
+        ]
+      ],
+      "id": "q34",
+      "condition": "base",
+      "raw": "**勾配降下法**（Grafting Down Method）とは、主に**植物学**（特に木の実や果実の栽培）において、**「果実を栽培する前に、果実の根茎や茎を栽培する」**というアプローチです。\n\nこの方法は、果実の生育を促進し、収穫時期を延ばすために使用される技術です。具体的な特徴と目的は以下の通りです。\n\n### 主な目的と特徴\n1.  **生育促進**：\n    果実の根茎や茎を栽培することで、果実の生育を促進し、収穫時期を延ばすことができます。\n2.  **収穫時期の延ばし**：\n    果実の生育が早くなることで",
+      "ok": false,
+      "refused": false,
+      "retrieved": [],
+      "retrieval_hit": null
+    }
+  ]
+}
