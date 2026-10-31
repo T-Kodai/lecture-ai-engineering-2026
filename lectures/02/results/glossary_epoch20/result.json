@@ -1,0 +1,233 @@
+{
+  "config": {
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "seed": 42,
+    "num_train_epochs": 20,
+    "max_steps": -1,
+    "warmup_steps": 6,
+    "lr": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "max_seq_len": 512,
+    "max_new_tokens": 160,
+    "gen": {
+      "do_sample": false
+    },
+    "rag_top_k": 3,
+    "rag_threshold": 0.25,
+    "data_base_url": "https://raw.githubusercontent.com/T-Kodai/lecture-ai-engineering-2026/lec02/"
+  },
+  "versions": {
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "trl": "1.14.2",
+    "torch": "2.15.0"
+  },
+  "device": "mps",
+  "method": "LoRA（量子化なし）",
+  "data": {
+    "train": 116,
+    "eval": 34,
+    "eval_by_category": {
+      "seen": 12,
+      "paraphrase": 12,
+      "unknown_course": 5,
+      "general": 5
+    }
+  },
+  "train": {
+    "seconds": 541,
+    "steps": 300,
+    "epochs": 20.0,
+    "mean_loss": 0.37119296252727507,
+    "losses": [
+      {
+        "step": 10,
+        "loss": 3.274514007568359
+      },
+      {
+        "step": 20,
+        "loss": 2.207869529724121
+      },
+      {
+        "step": 30,
+        "loss": 1.6605165481567383
+      },
+      {
+        "step": 40,
+        "loss": 0.9632793426513672
+      },
+      {
+        "step": 50,
+        "loss": 0.538755464553833
+      },
+      {
+        "step": 60,
+        "loss": 0.3215242862701416
+      },
+      {
+        "step": 70,
+        "loss": 0.17140047550201415
+      },
+      {
+        "step": 80,
+        "loss": 0.15657641887664794
+      },
+      {
+        "step": 90,
+        "loss": 0.13322144746780396
+      },
+      {
+        "step": 100,
+        "loss": 0.11775997877120972
+      },
+      {
+        "step": 110,
+        "loss": 0.09868702292442322
+      },
+      {
+        "step": 120,
+        "loss": 0.11347019672393799
+      },
+      {
+        "step": 130,
+        "loss": 0.09281089901924133
+      },
+      {
+        "step": 140,
+        "loss": 0.08992153406143188
+      },
+      {
+        "step": 150,
+        "loss": 0.08698527216911316
+      },
+      {
+        "step": 160,
+        "loss": 0.07896032333374023
+      },
+      {
+        "step": 170,
+        "loss": 0.07801079750061035
+      },
+      {
+        "step": 180,
+        "loss": 0.08168694972991944
+      },
+      {
+        "step": 190,
+        "loss": 0.07634166479110718
+      },
+      {
+        "step": 200,
+        "loss": 0.07410398125648499
+      },
+      {
+        "step": 210,
+        "loss": 0.0756923258304596
+      },
+      {
+        "step": 220,
+        "loss": 0.07345837354660034
+      },
+      {
+        "step": 230,
+        "loss": 0.07330312132835388
+      },
+      {
+        "step": 240,
+        "loss": 0.07339287400245667
+      },
+      {
+        "step": 250,
+        "loss": 0.07026614546775818
+      },
+      {
+        "step": 260,
+        "loss": 0.07135381698608398
+      },
+      {
+        "step": 270,
+        "loss": 0.07154144048690796
+      },
+      {
+        "step": 280,
+        "loss": 0.06994964480400086
+      },
+      {
+        "step": 290,
+        "loss": 0.07151352167129517
+      },
+      {
+        "step": 300,
+        "loss": 0.06892147064208984
+      }
+    ]
+  },
+  "summaries": {
+    "base": {
+      "condition": "base",
+      "n": 34,
+      "seconds": 167.9,
+      "ok_rate": 0.088,
+      "seen_ok": 0.083,
+      "seen_refused": 0.0,
+      "paraphrase_ok": 0.0,
+      "paraphrase_refused": 0.0,
+      "unknown_course_ok": 0.0,
+      "unknown_course_refused": 0.0,
+      "general_ok": 0.4,
+      "general_refused": 0.0
+    },
+    "rag": {
+      "condition": "rag",
+      "n": 34,
+      "seconds": 56.0,
+      "ok_rate": 0.735,
+      "seen_ok": 0.75,
+      "seen_refused": 0.0,
+      "paraphrase_ok": 0.917,
+      "paraphrase_refused": 0.0,
+      "unknown_course_ok": 0.4,
+      "unknown_course_refused": 0.4,
+      "general_ok": 0.6,
+      "general_refused": 0.0,
+      "retrieval_hit": 0.958
+    },
+    "ft": {
+      "condition": "ft",
+      "n": 34,
+      "seconds": 63.7,
+      "ok_rate": 0.5,
+      "seen_ok": 1.0,
+      "seen_refused": 0.0,
+      "paraphrase_ok": 0.333,
+      "paraphrase_refused": 0.0,
+      "unknown_course_ok": 0.0,
+      "unknown_course_refused": 0.0,
+      "general_ok": 0.2,
+      "general_refused": 0.0
+    }
+  },
+  "regressed": [
+    "「Docker」とは何ですか？"
+  ],
+  "improved": [
+    "「宿題の3レベル」とは何ですか？",
+    "「lecNN-start タグ」とは何ですか？",
+    "「既定モデル」とは何ですか？",
+    "「answer.md」とは何ですか？",
+    "「Pi」とは何ですか？",
+    "Pi coding agent はどんなツールですか？",
+    "「TestModel」とは何ですか？",
+    "「LoRA」とは何ですか？",
+    "「temperature」とは何ですか？",
+    "LLMで次のトークンを選ぶときのランダムさを調整する設定値を何と呼びますか？",
+    "「ハルシネーション」とは何ですか？",
+    "「MCP（Model Context Protocol）」とは何ですか？",
+    "Model Context Protocol について教えてください。",
+    "「Human-in-the-loop」とは何ですか？",
+    "APIで429エラーが返ってくるのはどんなときですか？"
+  ],
+  "executed_training_myself": true
+}
