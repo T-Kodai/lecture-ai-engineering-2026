@@ -1,0 +1,35 @@
+$ uv run python -m app.agent --trace AIE2026の講座の宿題にある「3レベル」とは何ですか？
+[model] gemini-3.5-flash-lite
+AIE2026講座における「3レベル」とは、宿題の構成を示す以下の3段階のことです。
+
+1. **基礎**：講義内容の確認を行うレベル
+2. **実装**：自分でコードを書くレベル
+3. **発展**：調査や試行を行うレベル
+
+この3つのレベルの中から、**どれか1つに取り組めばその回の宿題は完了**となります（原則として採点は行われません）。ご自身の理解度や目的に合わせて選んで取り組んでみてください。
+
+関連する回：第1回
+
+--- trace ---
+[tool call]   search_glossary({'query': '3レベル'})
+[tool return] search_glossary -> [{"term": "宿題の3レベル", "lecture": 1, "definition": "AIE2026の宿題の構成。「基礎（講義内容の確認）」「実装（自分でコードを書く）」「発展（調査や試行）」の3段階があり、どれか1つに取り組…
+[usage] RunUsage(cost=Decimal('0.0005799'), details={'text_prompt_tokens': 783}, input_text_tokens=783, input_tokens=783, output_tokens=138, requests=2, tool_calls=1)
+
+$ uv run python -m app.agent --trace LoRAとQLoRAの違いは？
+[model] gemini-3.5-flash-lite
+LoRAとQLoRAの違いは以下のとおりです。
+
+* **LoRA（Low-Rank Adaptation）**
+  事前学習済みの重みを固定したまま、重みの更新分を2つの小さな行列（低ランク行列）の積で近似し、その差分だけを学習するPEFT手法です。学習するパラメータ数が非常に少なく、効率よくモデルをチューニングできます。
+* **QLoRA（Quantized LoRA）**
+  LoRAの仕組みをベースにしつつ、ベースモデルの重みを4ビットなどに量子化（圧縮）してメモリを大幅に節約した状態で学習する手法です。これにより、より大きなモデルを限られたGPUメモリで扱えるようになります。
+
+関係する回：第2回
+
+--- trace ---
+[tool call]   search_glossary({'query': 'LoRA'})
+[tool call]   search_glossary({'query': 'QLoRA'})
+[tool return] search_glossary -> [{"term": "LoRA", "lecture": 2, "definition": "事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラ…
+[tool return] search_glossary -> [{"term": "QLoRA", "lecture": 2, "definition": "ベースモデルの重みを4ビットなどに量子化してメモリを節約したうえで、LoRAで学習する手法。より大きなモデルを小さなGPUで扱える。本講座の第2…
+[usage] RunUsage(cost=Decimal('0.0008463'), details={'text_prompt_tokens': 1196}, input_text_tokens=1196, input_tokens=1196, output_tokens=195, requests=2, tool_calls=2)
+

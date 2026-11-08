@@ -12,3 +12,6 @@ learning_log/
 
 # macOS
 .DS_Store
+
+# 第3回 発展(a)：adk run が作る会話の保存先（ローカルの実行記録）
+.adk/
