@@ -1,0 +1,144 @@
+{
+  "id": "c2d96ed2-4bf6-43fc-a760-3f52114e13d8",
+  "appName": "glossary_agent",
+  "userId": "test_user",
+  "state": {
+    "_time": "2026-11-08T11:35:25.448982"
+  },
+  "events": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "第2回の内容から確認問題を1問出して"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-ec276581-f0fa-4167-b210-b99fca379de0",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": ""
+      },
+      "id": "5d6ecd09-c419-416f-82fb-0b5cd5c8b0b8",
+      "timestamp": 1794105325.562312
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_8546622685991951061",
+              "args": {
+                "lecture": 2
+              },
+              "name": "make_quiz"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TpxDxoYPlXU5-Z1Otgrk0ZTsIeDE9nxx720LOKpNkTqp6jXZXzIBdkiafz4Qlbq6UaU-lyD-0hxm5teO8zWALcvED04ptDyFBt4DobEppFoLuuxgWMVdvCew="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 14,
+        "promptTokenCount": 498,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 498
+          }
+        ],
+        "totalTokenCount": 512
+      },
+      "invocationId": "e-ec276581-f0fa-4167-b210-b99fca379de0",
+      "author": "glossary_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "glossary_agent@1"
+      },
+      "longRunningToolIds": [],
+      "id": "949ce6f0-3d9a-4ef2-ac59-0a2db07c4fc7",
+      "timestamp": 1794105326.509202
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_8546622685991951061",
+              "name": "make_quiz",
+              "response": {
+                "result": "{\"question\": \"「Hugging Face Hub」の意味は？\", \"answer\": \"公開されたモデルやデータセットを共有・ダウンロードできるプラットフォーム。オープンウェイトのモデルを入手したり、LoRAアダプタを公開したりするのに使われる。\", \"lecture\": 2}"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-ec276581-f0fa-4167-b210-b99fca379de0",
+      "author": "glossary_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "glossary_agent@1"
+      },
+      "id": "66bd1b5f-3147-41d8-9d68-3b7f33b2a252",
+      "timestamp": 1794105326.513043
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "text": "それでは、第2回の内容から確認問題を1問出します。\n\n**問題：**\n「Hugging Face Hub」とはどのようなものか、説明してください。\n\n答えが分かったら教えてくださいね！\n\n（関係する回：第2回）",
+            "thoughtSignature": "EmAKXgFpFH0TiIaux2B0vUWH8ZP7J7_IiprhPeuaH77ie8wdtPnByGIDK6pAVwApsI2690t6-4MFPR1Tiv7NGoakODa8ciZs-Ey93GCYLLmgdahwzpWzids49dIUDVKVvIY="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 54,
+        "promptTokenCount": 585,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 585
+          }
+        ],
+        "totalTokenCount": 639
+      },
+      "invocationId": "e-ec276581-f0fa-4167-b210-b99fca379de0",
+      "author": "glossary_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "glossary_agent@1"
+      },
+      "id": "ff520023-f610-471a-ad69-db9854ec21f7",
+      "timestamp": 1794105327.211467
+    }
+  ],
+  "lastUpdateTime": 1794105327.211467
+}
