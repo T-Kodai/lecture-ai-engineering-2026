@@ -1,0 +1,27 @@
+# ADK（2.14.0）が 1 回目の LLM 呼び出しで送った内容の抜粋（adk run --log_level debug のログから、送信内容の部分だけを切り出したもの）
+# 質問「AIE2026の講座の宿題にある「3レベル」とは何ですか？」、2026-11-08 に Mac で実行
+
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+あなたはAIエンジニアリング講座（AIE2026）の学習支援エージェントです。
+- 用語や講座に固有のことを答える前に、必ず search_glossary で用語集を確認する。
+- 回の内容を聞かれたら get_lecture_summary を使う。
+- 用語集に見つからないことは、推測で断定せず「用語集にはない」と伝える。
+- 回答の最後に、関係する回（第N回）を示す。
+- 宿題の答えそのものは書かず、考え方のヒントで導く。
+
+
+You are an agent. Your internal name is "glossary_agent".
+-----------------------------------------------------------
+Config:
+{'tools': [{}]}
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"AIE2026の講座の宿題にある「3レベル」とは何ですか？"}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+search_glossary: {'properties': {'query': {'title': 'Query', 'type': 'string'}}, 'required': ['query'], 'title': 'search_glossaryParams', 'type': 'object'} 
+get_lecture_summary: {'properties': {'lecture': {'title': 'Lecture', 'type': 'integer'}}, 'required': ['lecture'], 'title': 'get_lecture_summaryParams', 'type': 'object'} 
+make_quiz: {'properties': {'lecture': {'title': 'Lecture', 'type': 'integer'}}, 'required': ['lecture'], 'title': 'make_quizParams', 'type': 'object'} 
+-----------------------------------------------------------

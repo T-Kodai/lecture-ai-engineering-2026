@@ -18,7 +18,9 @@ from pathlib import Path
 
 from pydantic_ai.messages import ToolCallPart
 
+from adk_agent.glossary_agent.agent import root_agent
 from app.agent import agent, build_model
+from app.config import MODEL
 
 QUESTIONS = {
     "levels": "AIE2026の講座の宿題にある「3レベル」とは何ですか？",
@@ -77,8 +79,14 @@ def main() -> None:
     args = parser.parse_args()
     out = Path(args.out)
     keep_dir = out.parent / "adk_sessions"
+    # 同じモデルどうしで比べる（Pydantic AI 側は AIE_MODEL に従い、ADK 側は agent.py に固定）
+    if MODEL != root_agent.model:
+        raise SystemExit(f"モデルが違います: Pydantic AI={MODEL}, ADK={root_agent.model}。AIE_MODEL を外して実行してください")
+    # 前回の結果を上書き・混在させない（run 番号とセッションのファイル名は毎回 run1 から始まるため）
+    if out.exists() or any(keep_dir.glob("*.session.json")):
+        raise SystemExit(f"{out} か {keep_dir} に前回の結果があります。別のフォルダを --out に指定してください")
     keep_dir.mkdir(parents=True, exist_ok=True)
-    with out.open("a", encoding="utf-8") as f:
+    with out.open("w", encoding="utf-8") as f:
         for run in range(1, args.runs + 1):
             for qid, question in QUESTIONS.items():
                 for framework in ["pydantic_ai", "adk"]:
@@ -86,7 +94,7 @@ def main() -> None:
                         record = run_pydantic(question)
                     else:
                         record = run_adk(question, f"{qid}-run{run}", keep_dir)
-                    record = {"framework": framework, "question": qid, "run": run} | record
+                    record = {"framework": framework, "model": MODEL, "question": qid, "run": run} | record
                     f.write(json.dumps(record, ensure_ascii=False) + "\n")
                     f.flush()
                     calls = ", ".join(f"{c['name']}({c['args']})" for c in record["tool_calls"])
