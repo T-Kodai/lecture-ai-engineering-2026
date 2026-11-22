@@ -1,0 +1,162 @@
+{
+  "id": "db3b7753-20de-4091-a67e-141ef5d044ad",
+  "appName": "glossary_agent",
+  "userId": "test_user",
+  "state": {
+    "_time": "2026-11-08T11:37:15.920643"
+  },
+  "events": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "LoRAとQLoRAの違いは？"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-43167a21-1cbc-44dd-b647-ad5b7a1173b0",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": ""
+      },
+      "id": "0e4ac0c0-3ae9-48cd-98b4-4c0eac67cfb3",
+      "timestamp": 1794105436.02603
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_9294216463591601697",
+              "args": {
+                "query": "LoRA"
+              },
+              "name": "search_glossary"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TRVla83Jsk0hFlNYNW29BP0i1lTHNnt_109BGmVe1ew94WozLZFWg7UnavIrX6gubbmSt0Ll8-Wt8kCfrkWlWqvrz0E0kS5J-cezTINkvtXJfKYtoEJUooLw="
+          },
+          {
+            "functionCall": {
+              "id": "call_9294216463591603660",
+              "args": {
+                "query": "QLoRA"
+              },
+              "name": "search_glossary"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 37,
+        "promptTokenCount": 497,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 497
+          }
+        ],
+        "totalTokenCount": 534
+      },
+      "invocationId": "e-43167a21-1cbc-44dd-b647-ad5b7a1173b0",
+      "author": "glossary_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "glossary_agent@1"
+      },
+      "longRunningToolIds": [],
+      "id": "df929388-b6e6-4fc4-9bf3-d80876a1d803",
+      "timestamp": 1794105437.109046
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_9294216463591601697",
+              "name": "search_glossary",
+              "response": {
+                "result": "[{\"term\": \"LoRA\", \"lecture\": 2, \"definition\": \"事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。\", \"related\": [\"peft\", \"lora-rank\", \"qlora\"]}, {\"term\": \"ランク（LoRAのr）\", \"lecture\": 2, \"definition\": \"LoRAで使う低ランク行列の大きさを決めるハイパーパラメータ。大きいほど表現力が上がるが、学習するパラメータとメモリも増える。\", \"related\": [\"lora\"]}, {\"term\": \"QLoRA\", \"lecture\": 2, \"definition\": \"ベースモデルの重みを4ビットなどに量子化してメモリを節約したうえで、LoRAで学習する手法。より大きなモデルを小さなGPUで扱える。本講座の第2回演習ではモデルがGPUに載るためLoRAで学習し、4ビットで読み込んだときのメモリと出力の違いを発展で比べる。\", \"related\": [\"lora\", \"quantization\"]}]"
+              }
+            }
+          },
+          {
+            "functionResponse": {
+              "id": "call_9294216463591603660",
+              "name": "search_glossary",
+              "response": {
+                "result": "[{\"term\": \"QLoRA\", \"lecture\": 2, \"definition\": \"ベースモデルの重みを4ビットなどに量子化してメモリを節約したうえで、LoRAで学習する手法。より大きなモデルを小さなGPUで扱える。本講座の第2回演習ではモデルがGPUに載るためLoRAで学習し、4ビットで読み込んだときのメモリと出力の違いを発展で比べる。\", \"related\": [\"lora\", \"quantization\"]}, {\"term\": \"LoRA\", \"lecture\": 2, \"definition\": \"事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。\", \"related\": [\"peft\", \"lora-rank\", \"qlora\"]}]"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-43167a21-1cbc-44dd-b647-ad5b7a1173b0",
+      "author": "glossary_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "glossary_agent@1"
+      },
+      "id": "85e2113b-c794-4b7a-b322-e2542d328a9a",
+      "timestamp": 1794105437.1145658
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "text": "LoRAとQLoRAの違いは、ベースモデルの重みをそのまま使うか、量子化してメモリを節約するかにあります。\n\n* **LoRA**: 事前学習済みの重みは固定したまま、重みの更新分を小さな低ランク行列（アダプタ）で表し、その部分だけを学習するPEFT手法です。学習パラメータやファイルサイズを大幅に削減できます。\n* **QLoRA**: ベースモデルの重みを4ビットなどに量子化（Quantization）してメモリをさらに節約したうえで、LoRAによる学習を行う手法です。これにより、より大きなモデルを小さなGPU環境でも扱えるようになります。\n\n（第2回）",
+            "thoughtSignature": "EmAKXgFpFH0TG9RbTMTp5nTxVyt-NLpOnxsKbMRq9jtcGWhFHJPVaVxXXgOxpNwYU2vl0vq11x5yzNcIZ5jIi1125D5u7VNckLd7j_pNBDcZ4ZVk0I16dBuAkGxgGs-dU7Q="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 147,
+        "promptTokenCount": 1053,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1053
+          }
+        ],
+        "totalTokenCount": 1200
+      },
+      "invocationId": "e-43167a21-1cbc-44dd-b647-ad5b7a1173b0",
+      "author": "glossary_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "glossary_agent@1"
+      },
+      "id": "53f01459-7535-47a5-8904-db0dd376fa01",
+      "timestamp": 1794105438.353288
+    }
+  ],
+  "lastUpdateTime": 1794105438.353288
+}

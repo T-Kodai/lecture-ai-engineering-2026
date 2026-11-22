@@ -1,0 +1,32 @@
+$ uv run python -m app.agent --trace "第2回の内容から確認問題を1問出して"   # 1 回目
+[model] gemini-3.5-flash-lite
+第2回から確認問題を1問出します！
+
+**Q. 「Hugging Face Hub」とはどのようなものか、簡単に説明してください。**
+
+答えを知りたいときや、自分の言葉で答えて確認したいときはいつでも声をかけてくださいね！
+
+（関連：第2回）
+
+--- trace ---
+[tool call]   make_quiz({'lecture': 2})
+[tool return] make_quiz -> {"question": "「Hugging Face Hub」の意味は？", "answer": "公開されたモデルやデータセットを共有・ダウンロードできるプラットフォーム。オープンウェイトのモデルを入手したり、LoRAアダプタを公開した…
+[usage] RunUsage(cost=Decimal('0.0004721'), details={'text_prompt_tokens': 957}, input_text_tokens=957, input_tokens=957, output_tokens=74, requests=2, tool_calls=1)
+
+$ uv run python -m app.agent --trace "第2回の内容から確認問題を1問出して"   # 2 回目
+[model] gemini-3.5-flash-lite
+第2回から確認問題を1問出しますね！
+
+**【確認問題】**
+「**事前学習**」とは、どのような学習段階のことを指すでしょうか？
+
+---
+答えが分かったら教えてくださいね！
+
+（関連する回：第2回）
+
+--- trace ---
+[tool call]   make_quiz({'lecture': 2})
+[tool return] make_quiz -> {"question": "「事前学習」の意味は？", "answer": "大量の汎用テキストで、次のトークンを予測するようにモデルを学習させる最初の段階。言語の知識や一般的な常識の多くはここで身につく。", "lecture": 2}…
+[usage] RunUsage(cost=Decimal('0.0004662'), details={'text_prompt_tokens': 954}, input_text_tokens=954, input_tokens=954, output_tokens=72, requests=2, tool_calls=1)
+

@@ -1,0 +1,133 @@
+{
+  "config": {
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "seed": 42,
+    "num_train_epochs": 5,
+    "max_steps": -1,
+    "warmup_steps": 6,
+    "lr": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "max_seq_len": 512,
+    "max_new_tokens": 160,
+    "gen": {
+      "do_sample": false
+    },
+    "rag_top_k": 3,
+    "rag_threshold": 0.25,
+    "data_base_url": "https://raw.githubusercontent.com/T-Kodai/lecture-ai-engineering-2026/lec02/"
+  },
+  "versions": {
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "trl": "1.14.2",
+    "torch": "2.15.0"
+  },
+  "device": "mps",
+  "method": "LoRA（量子化なし）",
+  "data": {
+    "train": 116,
+    "eval": 34,
+    "eval_by_category": {
+      "seen": 12,
+      "paraphrase": 12,
+      "unknown_course": 5,
+      "general": 5
+    }
+  },
+  "train": {
+    "seconds": 135,
+    "steps": 75,
+    "epochs": 5.0,
+    "mean_loss": 1.3254751873016357,
+    "losses": [
+      {
+        "step": 10,
+        "loss": 3.268832778930664
+      },
+      {
+        "step": 20,
+        "loss": 2.212990379333496
+      },
+      {
+        "step": 30,
+        "loss": 1.683275032043457
+      },
+      {
+        "step": 40,
+        "loss": 1.047541332244873
+      },
+      {
+        "step": 50,
+        "loss": 0.6707354545593261
+      },
+      {
+        "step": 60,
+        "loss": 0.5056463241577148
+      },
+      {
+        "step": 70,
+        "loss": 0.3468561410903931
+      }
+    ]
+  },
+  "summaries": {
+    "base": {
+      "condition": "base",
+      "n": 34,
+      "seconds": 174.5,
+      "ok_rate": 0.088,
+      "seen_ok": 0.083,
+      "seen_refused": 0.0,
+      "paraphrase_ok": 0.0,
+      "paraphrase_refused": 0.0,
+      "unknown_course_ok": 0.0,
+      "unknown_course_refused": 0.0,
+      "general_ok": 0.4,
+      "general_refused": 0.0
+    },
+    "rag": {
+      "condition": "rag",
+      "n": 34,
+      "seconds": 54.4,
+      "ok_rate": 0.735,
+      "seen_ok": 0.75,
+      "seen_refused": 0.0,
+      "paraphrase_ok": 0.917,
+      "paraphrase_refused": 0.0,
+      "unknown_course_ok": 0.4,
+      "unknown_course_refused": 0.4,
+      "general_ok": 0.6,
+      "general_refused": 0.0,
+      "retrieval_hit": 0.958
+    },
+    "ft": {
+      "condition": "ft",
+      "n": 34,
+      "seconds": 59.9,
+      "ok_rate": 0.353,
+      "seen_ok": 0.667,
+      "seen_refused": 0.0,
+      "paraphrase_ok": 0.083,
+      "paraphrase_refused": 0.0,
+      "unknown_course_ok": 0.0,
+      "unknown_course_refused": 0.0,
+      "general_ok": 0.6,
+      "general_refused": 0.0
+    }
+  },
+  "regressed": [],
+  "improved": [
+    "「既定モデル」とは何ですか？",
+    "「TestModel」とは何ですか？",
+    "「LoRA」とは何ですか？",
+    "「temperature」とは何ですか？",
+    "「ハルシネーション」とは何ですか？",
+    "「MCP（Model Context Protocol）」とは何ですか？",
+    "「Human-in-the-loop」とは何ですか？",
+    "APIで429エラーが返ってくるのはどんなときですか？",
+    "「勾配降下法」とは何ですか？"
+  ],
+  "executed_training_myself": true
+}

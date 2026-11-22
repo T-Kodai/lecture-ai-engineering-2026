@@ -1,0 +1,144 @@
+{
+  "id": "b2dd2af8-0b42-4f2e-9cd4-e3e2af1f7103",
+  "appName": "glossary_agent",
+  "userId": "test_user",
+  "state": {
+    "_time": "2026-11-08T11:37:38.401027"
+  },
+  "events": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "第2回の内容から確認問題を1問出して"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-56059b4a-a599-4260-982c-3bed66d8ce2a",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": ""
+      },
+      "id": "1600c962-ec1e-4f58-8e22-b48c0edb61b9",
+      "timestamp": 1794105458.5204139
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_3147969889293472850",
+              "args": {
+                "lecture": 2
+              },
+              "name": "make_quiz"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TBkXRo3Mspwd4KQ5BHmUT3TJxvK3EMVE7t3HCrEjI5zF1fpRftZsfhKhGcTuvYxaC4YoHsuvqktsLOAvXJa1dY3wgsns-evb6RTzLfGnGPQq8mMqxejaOhEQ="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 14,
+        "promptTokenCount": 498,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 498
+          }
+        ],
+        "totalTokenCount": 512
+      },
+      "invocationId": "e-56059b4a-a599-4260-982c-3bed66d8ce2a",
+      "author": "glossary_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "glossary_agent@1"
+      },
+      "longRunningToolIds": [],
+      "id": "d8173150-2b90-44c5-9569-06ec82f4a50c",
+      "timestamp": 1794105459.571893
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_3147969889293472850",
+              "name": "make_quiz",
+              "response": {
+                "result": "{\"question\": \"「過学習」の意味は？\", \"answer\": \"学習データにだけ過度に適合し、未知の入力に対する性能が落ちる状態。学習に使わない検証データで性能を測って気づく。\", \"lecture\": 2}"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-56059b4a-a599-4260-982c-3bed66d8ce2a",
+      "author": "glossary_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "glossary_agent@1"
+      },
+      "id": "74e5e772-3758-417d-8b49-e6fcd9ff39c7",
+      "timestamp": 1794105459.5738602
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "text": "第2回の内容から確認問題を1問出します！\n\n**問題：**\n「過学習」とはどのような状態のことでしょうか？\n\n（答えを知りたいときは、いつでも声をかけてくださいね！）\n\n第2回",
+            "thoughtSignature": "EmAKXgFpFH0T5U9RjBQhNI6KtKfm0Ep5xv4ADplHNzMsrEBUnflcS7Y16IGqA88eCvdfPACuTi5FHqlNoIJnfQ1qFs_3d-BilPvB8wKox4_BOi3et4Biw3Wd3BbqYVoyzfs="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 45,
+        "promptTokenCount": 579,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 579
+          }
+        ],
+        "totalTokenCount": 624
+      },
+      "invocationId": "e-56059b4a-a599-4260-982c-3bed66d8ce2a",
+      "author": "glossary_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "glossary_agent@1"
+      },
+      "id": "47e00e81-db60-4ab2-a8a3-78379119fb75",
+      "timestamp": 1794105460.2913861
+    }
+  ],
+  "lastUpdateTime": 1794105460.2913861
+}

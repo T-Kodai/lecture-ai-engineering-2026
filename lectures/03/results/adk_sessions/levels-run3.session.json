@@ -1,0 +1,144 @@
+{
+  "id": "341a7301-e1b0-4e43-8488-8c8198d9ac46",
+  "appName": "glossary_agent",
+  "userId": "test_user",
+  "state": {
+    "_time": "2026-11-08T11:36:53.709692"
+  },
+  "events": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "AIE2026の講座の宿題にある「3レベル」とは何ですか？"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-e672507f-aa62-4fc3-956f-496851ae07b2",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": ""
+      },
+      "id": "d77ceaf4-7ece-45e0-9bb0-6f3f35783cf4",
+      "timestamp": 1794105413.79584
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_7926842545874208297",
+              "args": {
+                "query": "3レベル"
+              },
+              "name": "search_glossary"
+            },
+            "thoughtSignature": "EmAKXgFpFH0TW2yxJUF83vTBhtHdnDhbQf-lnOIoffQIj4fAu1ApMiJIxENXbMK1KJBlffls4ae6MSyeKCx-1fsvZmSoe8Lu3AIXZrN2m4qkuDA1OLpmnVcQXua_bMUAw-8="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 18,
+        "promptTokenCount": 508,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 508
+          }
+        ],
+        "totalTokenCount": 526
+      },
+      "invocationId": "e-e672507f-aa62-4fc3-956f-496851ae07b2",
+      "author": "glossary_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "glossary_agent@1"
+      },
+      "longRunningToolIds": [],
+      "id": "e79bfe9d-c75b-4706-bbc9-2c4eb7d20b69",
+      "timestamp": 1794105414.517214
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_7926842545874208297",
+              "name": "search_glossary",
+              "response": {
+                "result": "[{\"term\": \"宿題の3レベル\", \"lecture\": 1, \"definition\": \"AIE2026の宿題の構成。「基礎（講義内容の確認）」「実装（自分でコードを書く）」「発展（調査や試行）」の3段階があり、どれか1つに取り組めばその回の宿題は完了。原則として採点はしない。\", \"related\": [\"answer-md\"]}]"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-e672507f-aa62-4fc3-956f-496851ae07b2",
+      "author": "glossary_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "glossary_agent@1"
+      },
+      "id": "0eff7a1c-de83-46f7-a61f-a1031a285e1f",
+      "timestamp": 1794105414.519382
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "text": "「3レベル」とは、AIE2026の宿題の構成を表す言葉です。\n\n具体的には以下の3つの段階（レベル）に分かれています。\n\n1. **基礎**：講義内容の確認\n2. **実装**：自分でコードを書く\n3. **発展**：調査や試行\n\nこれら3つのうち**どれか1つ**に取り組めば、その回の宿題は完了となります。なお、原則として宿題の採点は行われません。\n\n第1回",
+            "thoughtSignature": "EmAKXgFpFH0T7vXBBtrLm51ecKeXioGdyusicVsvvWg5KMB85daWl33YWAPN1x3GX0ag_JGOQcyTrrOcUHFRxvAxJJJZUQImifeplMMxFbOrInpofBI3f2FU8b-aoUVwcOY="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 112,
+        "promptTokenCount": 631,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 631
+          }
+        ],
+        "totalTokenCount": 743
+      },
+      "invocationId": "e-e672507f-aa62-4fc3-956f-496851ae07b2",
+      "author": "glossary_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "glossary_agent@1"
+      },
+      "id": "085f7c10-7493-4919-a67d-58bbc5d6cb30",
+      "timestamp": 1794105415.641668
+    }
+  ],
+  "lastUpdateTime": 1794105415.641668
+}

@@ -1,0 +1,3 @@
+# 演習の採点（app/judge.py のまま。CriterionVerdict は reason → verdict の順）で、#01 を 1 件だけ採点したときの応答（ツール呼び出しの引数）
+# 2026-11-14 に Mac で実行。モデル gemini-3.5-flash-lite、temperature 0。
+{"grounding": {"reason": "用語集のエントリに沿って正確に説明されており、矛盾がないため。", "verdict": "pass"}, "scope": {"verdict": "pass", "reason": "AIエンジニアリング講座の用語に関する質問に対して適切に答えているため。"}, "hint": {"verdict": "pass", "reason": "宿題の答えではなく用語の説明に関する質問であるため、この基準は自動的に満たされる。"}, "clarity": {"verdict": "pass", "reason": "質問に直接答え、簡潔で読みやすく書かれているため。"}}

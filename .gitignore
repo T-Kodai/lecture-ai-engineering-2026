@@ -15,3 +15,6 @@ learning_log/
 
 # 第5回: 資料から再生成する検索DB
 .cache/rag/
+
+# 第3回 発展(a)：adk run が作る会話の保存先（ローカルの実行記録）
+.adk/

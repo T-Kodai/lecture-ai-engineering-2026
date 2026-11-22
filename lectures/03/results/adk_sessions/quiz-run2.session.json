@@ -1,0 +1,144 @@
+{
+  "id": "f37e2582-8330-4d46-960f-c67bfae0a854",
+  "appName": "glossary_agent",
+  "userId": "test_user",
+  "state": {
+    "_time": "2026-11-08T11:36:32.119419"
+  },
+  "events": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "第2回の内容から確認問題を1問出して"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-89f23cef-9ebc-4619-9b84-c83c8c2f7425",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": ""
+      },
+      "id": "19adc9b6-f66a-4421-9706-1416e8cb19c0",
+      "timestamp": 1794105392.2038689
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "call_702401433689684293",
+              "args": {
+                "lecture": 2
+              },
+              "name": "make_quiz"
+            },
+            "thoughtSignature": "EmAKXgFpFH0T_asrEa-mwaQTaDepFwczg0E2oCjCw-gDYhQiKXcSQZUGGF2o20tYl49_TZr2BEsUBybXCgnejJKwpCs91eF0y8KEXn8zHBzb7RTZjjbRVS-dgNKMjFgaCZY="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 14,
+        "promptTokenCount": 498,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 498
+          }
+        ],
+        "totalTokenCount": 512
+      },
+      "invocationId": "e-89f23cef-9ebc-4619-9b84-c83c8c2f7425",
+      "author": "glossary_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "glossary_agent@1"
+      },
+      "longRunningToolIds": [],
+      "id": "2d94f47c-15bb-4873-91bd-217d1f97cd9e",
+      "timestamp": 1794105393.159607
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "call_702401433689684293",
+              "name": "make_quiz",
+              "response": {
+                "result": "{\"question\": \"「QLoRA」の意味は？\", \"answer\": \"ベースモデルの重みを4ビットなどに量子化してメモリを節約したうえで、LoRAで学習する手法。より大きなモデルを小さなGPUで扱える。本講座の第2回演習ではモデルがGPUに載るためLoRAで学習し、4ビットで読み込んだときのメモリと出力の違いを発展で比べる。\", \"lecture\": 2}"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-89f23cef-9ebc-4619-9b84-c83c8c2f7425",
+      "author": "glossary_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "glossary_agent@1"
+      },
+      "id": "2c6929a3-29f1-46ff-a992-2707da24ce9f",
+      "timestamp": 1794105393.161534
+    },
+    {
+      "modelVersion": "gemini-3.5-flash-lite",
+      "content": {
+        "parts": [
+          {
+            "text": "第2回からの確認問題です！\n\n**Q. 「QLoRA」とはどのような手法でしょうか？**\n\n考えてみてくださいね。答え合わせをしたいときはいつでも声をかけてください！\n\n関連する回：第2回",
+            "thoughtSignature": "EmAKXgFpFH0TBb4rngglr_eNUxEkV0MIPIIRyqriuITlWb5t21yJaqKUNBxYGAuZQLgkYZm8WiPUMpbAUbSuSePnfVuMmkG79d-ZZvWjf39skuMLODJHXjA9CsuCBurp_8Q="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 47,
+        "promptTokenCount": 622,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 622
+          }
+        ],
+        "totalTokenCount": 669
+      },
+      "invocationId": "e-89f23cef-9ebc-4619-9b84-c83c8c2f7425",
+      "author": "glossary_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "nodeInfo": {
+        "path": "glossary_agent@1"
+      },
+      "id": "023d6724-0d5c-4886-a099-78499210be90",
+      "timestamp": 1794105393.8273852
+    }
+  ],
+  "lastUpdateTime": 1794105393.8273852
+}
