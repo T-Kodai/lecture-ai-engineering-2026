@@ -1,0 +1,61 @@
+$ （演習の --trace に出た検索語で、各方式が渡したページを検索だけで再現。2026-11-22 実行）
+## LoRA（STEP1〜4）: 'LoRA 固定 学習 QLoRA 追加'
+  vector  lec02-main-p052  d=0.235  LoRA と QLoRA ：大きなモデルも GPU 1 台で調整できる
+  vector  lec02-main-p051  d=0.252  PEFT ：モデル全体ではなく、一部だけを学習する
+  vector  lec02-main-p060  d=0.278  今日の演習： QLoRA で出力形式を矯正し、効果を測る
+  vector  lec02-main-p047  d=0.296  根拠と諸説：知識の追加は RAG が効きやすい
+  vector  lec02-main-p061  d=0.303  演習の進め方と提出物（仮）
+  graph   lec02-main-p052  入口  LoRA と QLoRA ：大きなモデルも GPU 1 台で調整できる
+  graph   lec02-main-p051  入口  PEFT ：モデル全体ではなく、一部だけを学習する
+  graph   lec02-main-p060  入口  今日の演習： QLoRA で出力形式を矯正し、効果を測る
+  graph   lec02-main-p053  1hop  チャットボットの場合：何を FT し、何を FT しないか
+  graph   lec02-main-p050  1hop  判断の順番：測る → 分ける → プロンプト → Fine-Tuning
+  graph   lec02-main-p059  1hop  第 2 回のまとめ： 4 つの芯と、明日やること
+  graph   lec02-main-p061  1hop  演習の進め方と提出物（仮）
+  graph   lec02-main-p049  2hop  FT は「コストを下げる」ためにも使う
+  graph   lec02-main-p062  2hop  次回： AI エージェント。今日の性質が設計の前提になる
+  graph   lec02-main-p047  2hop  根拠と諸説：知識の追加は RAG が効きやすい
+## 複数ページ: 'コンパクション セッション メモリ 長期メモリ 日々のメモ'
+  vector  lec03-main-p039  d=0.271  実装例：Claude
+  vector  lec03-main-p065  d=0.271  補足：メモリと Context Engineering の最新動向
+  vector  lec03-main-p038  d=0.274  メモリがないと、毎回ゼロからやり直しになる
+  vector  lec03-main-p040  d=0.295  実装例：OpenClaw
+  vector  lec03-main-p013  d=0.308  メモリ
+  graph   lec03-main-p039  入口  実装例：Claude
+  graph   lec03-main-p065  入口  補足：メモリと Context Engineering の最新動向
+  graph   lec03-main-p038  入口  メモリがないと、毎回ゼロからやり直しになる
+  graph   lec03-main-p040  1hop  実装例：OpenClaw
+  graph   lec03-main-p064  1hop  補足：長時間タスクの実行能力の最新動向
+  graph   lec03-main-p066  1hop  補足：設定ファイルの標準化（AGENTS.md・Skills）の最新動向
+  graph   lec03-main-p037  1hop  Part 6 メモリ
+  graph   lec03-main-p041  2hop  Skill：繰り返す作業の手順をファイルに保存しておく
+  graph   lec03-main-p063  2hop  補足：ツール呼び出しの最新動向
+  graph   lec03-main-p067  2hop  補足：サンドボックスと権限・承認の最新動向
+## 資料にない（vector）: '実測平均応答時間 正答率 RAG'
+  vector  lec02-main-p013  d=0.295  帰結①：同じ質問でも、答えは毎回変わる
+  vector  lec03-main-p064  d=0.305  補足：長時間タスクの実行能力の最新動向
+  vector  lec03-main-p019  d=0.324  誤差の累積
+  vector  lec01-main-p019  d=0.331  研究室の実例：大規模講義の質問に答えるチャットボット
+  vector  lec02-main-p024  d=0.332  事後学習の前と後：同じ質問でも、ふるまいが変わる
+## 資料にない（graph 1回目）: '実測 平均応答時間 正答率 RAG'
+  graph   lec02-main-p013  入口  帰結①：同じ質問でも、答えは毎回変わる
+  graph   lec03-main-p064  入口  補足：長時間タスクの実行能力の最新動向
+  graph   lec03-main-p019  入口  誤差の累積
+  graph   lec02-main-p012  1hop  サンプリング：確率からどう選ぶかで、答えの性格が変わる
+  graph   lec02-main-p014  1hop  帰結②：知らないことも、それらしく答えてしまう
+  graph   lec03-main-p063  1hop  補足：ツール呼び出しの最新動向
+  graph   lec03-main-p065  1hop  補足：メモリと Context Engineering の最新動向
+  graph   lec03-main-p018  1hop  Part 3 ループ
+  graph   lec03-main-p020  1hop  定量的な目標設定の重要性
+  graph   lec02-main-p011  2hop  モデルの正体：数十億個の数値（パラメータ）を持つ巨大な関数
+## 資料にない（graph 2回目）: 'RAG 実測 平均応答時間 正答率'
+  graph   lec02-main-p013  入口  帰結①：同じ質問でも、答えは毎回変わる
+  graph   lec03-main-p064  入口  補足：長時間タスクの実行能力の最新動向
+  graph   lec03-main-p019  入口  誤差の累積
+  graph   lec02-main-p012  1hop  サンプリング：確率からどう選ぶかで、答えの性格が変わる
+  graph   lec02-main-p014  1hop  帰結②：知らないことも、それらしく答えてしまう
+  graph   lec03-main-p063  1hop  補足：ツール呼び出しの最新動向
+  graph   lec03-main-p065  1hop  補足：メモリと Context Engineering の最新動向
+  graph   lec03-main-p018  1hop  Part 3 ループ
+  graph   lec03-main-p020  1hop  定量的な目標設定の重要性
+  graph   lec02-main-p011  2hop  モデルの正体：数十億個の数値（パラメータ）を持つ巨大な関数
