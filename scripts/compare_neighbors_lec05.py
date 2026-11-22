@@ -33,7 +33,7 @@ QUESTIONS = {
     "none": "今回作ったRAGの実測平均応答時間と正答率は？",
 }
 CONDITIONS = {"normal": 0, "neighbors": 1}
-CITATION = re.compile(r"第\s*(\d+)\s*回[・･]?\s*PDF\s*p\.\s*(\d+(?:\s*[,、]\s*(?:p\.)?\s*\d+)*)")
+CITATION = re.compile(r"第\s*(\d+)\s*回[・･]?\s*PDF\s*p\.\s*(\d+(?:\s*[,、・･]\s*(?:p\.)?\s*\d+)*)")
 
 
 def cited_pages(text: str) -> list[str]:
@@ -71,7 +71,10 @@ def run_once(question: str) -> dict:
 
 
 def summarize(path: Path) -> None:
-    """記録した JSONL を質問・条件ごとに集計する（API は呼ばない）。"""
+    """記録した JSONL を質問・条件ごとに集計する（API は呼ばない）。
+
+    ページ数はどちらもツールの戻り値の延べ件数（検索を複数回呼んだ回は合計）。費用が算定できない回は「算定不可」と出す。
+    """
     records = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line]
     print("質問     条件       回  渡したページ(うち前後)  引用した前後ページ        入力   出力   秒     USD")
     for qid in QUESTIONS:
@@ -79,17 +82,23 @@ def summarize(path: Path) -> None:
             rows = sorted((r for r in records if r["question"] == qid and r["condition"] == condition),
                           key=lambda r: r["run"])
             for r in rows:
-                added = {g["page_id"].replace("-main-p", "-p") for g in r["given_pages"] if g["neighbor"]}
-                used = sorted(added & set(r["cited_pages"]))
+                added = [g["page_id"].replace("-main-p", "-p") for g in r["given_pages"] if g["neighbor"]]
+                used = sorted(set(added) & set(r["cited_pages"]))
+                cost = "算定不可" if r["cost_usd"] is None else f"{r['cost_usd']:.6f}"
                 print(f"{qid:<8} {condition:<10} {r['run']}   {len(r['given_pages']):>2} ({len(added):>2})"
                       f"               {','.join(used) or '-':<24} {r['input_tokens']:>6} {r['output_tokens']:>5}"
-                      f" {r['seconds']:>5} {r['cost_usd']:.6f}")
+                      f" {r['seconds']:>5} {cost}")
     print("\n条件ごとの平均（全質問・全回）")
     for condition in CONDITIONS:
         rows = [r for r in records if r["condition"] == condition]
+        if not rows:
+            print(f"{condition:<10} n=0")
+            continue
         mean = lambda key: sum(r[key] for r in rows) / len(rows)
+        costs = [r["cost_usd"] for r in rows if r["cost_usd"] is not None]
+        cost = f"${sum(costs) / len(costs):.6f}（n={len(costs)}）" if costs else "算定不可"
         print(f"{condition:<10} n={len(rows)} 入力 {mean('input_tokens'):,.0f} / 出力 {mean('output_tokens'):,.0f}"
-              f" / {mean('seconds'):.2f} 秒 / ${mean('cost_usd'):.6f}")
+              f" / {mean('seconds'):.2f} 秒 / {cost}")
 
 
 def main() -> None:

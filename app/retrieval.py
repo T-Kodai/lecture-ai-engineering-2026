@@ -143,6 +143,7 @@ def add_neighbor_pages(hits: list[dict], pages: list[dict], window: int) -> list
 
     - 前後は同じ資料の中のページ順でたどり、別の資料はまたがない
     - 同じページは 1 回だけ入れる。検索で当たったページは前後としては入れず、当たった側として入れる
+    - 2 つの当たったページの間のページは、先に処理した（順位が上の）ページの前後として 1 回だけ入れる
     - 当たったページの前後を [前, 当たったページ, 後] の順に並べ、足したページには neighbor_of（どのページの前後か）を付ける
     """
     if window <= 0:
@@ -165,7 +166,7 @@ def add_neighbor_pages(hits: list[dict], pages: list[dict], window: int) -> list
             results.append(entry)
 
     for hit in hits:
-        if hit["page_id"] not in position:  # 対象資料の外（索引だけにあるページ）は前後をたどらない
+        if hit["page_id"] not in position:  # pages に無いページは、前後をたどらずそのまま入れる
             put(hit)
             continue
         document_id, i = position[hit["page_id"]]
@@ -181,12 +182,25 @@ def add_neighbor_pages(hits: list[dict], pages: list[dict], window: int) -> list
     return results
 
 
+def load_index_pages(path: Path = RAG_DB) -> list[dict]:
+    """検索DBに入っているページの本文と引用情報を返す（埋め込みは読まない）。
+
+    前後ページを、検索に使った索引と同じ本文・同じ範囲から取るために使う。
+    AIE_RAG_DB で別の本文から作った索引を使っても、当たったページと前後ページの版がずれない。
+    """
+    with open_index(path) as db:
+        rows = db.execute("""
+            SELECT page_id, document_id, lecture, document_title, section, title, page, content FROM chunks
+        """)
+        return [dict(row) for row in rows]
+
+
 def search(query: str) -> list[dict]:
     """ベクトル検索の結果を返す。RAG_NEIGHBOR_PAGES が 1 以上なら、当たったページの前後の本文も足す。"""
     hits = search_vector(query)
     if RAG_NEIGHBOR_PAGES <= 0:
         return hits
-    return add_neighbor_pages(hits, load_pages(RAG_SOURCE), RAG_NEIGHBOR_PAGES)
+    return add_neighbor_pages(hits, load_index_pages(RAG_DB), RAG_NEIGHBOR_PAGES)
 
 
 def search_graph(query: str) -> dict:
