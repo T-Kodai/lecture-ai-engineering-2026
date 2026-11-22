@@ -19,6 +19,9 @@ RAG_GRAPH = ROOT / "data/rag_data/graph.json"
 RAG_DB = Path(os.getenv("AIE_RAG_DB", str(ROOT / "data/rag_data/index.sqlite3")))
 RAG_DOCUMENT_IDS = ("lec01-main", "lec02-main", "lec03-main")
 RAG_TOP_K = 5
+# 第5回 宿題（実装）: 検索で当たったページの前後何ページまで本文を足すか。0 なら足さない（通常の検索）。
+#   例: AIE_RAG_NEIGHBORS=1 uv run python -m app.agent --trace "..."
+RAG_NEIGHBOR_PAGES = int(os.getenv("AIE_RAG_NEIGHBORS", "0"))
 GRAPH_START_K = 3
 GRAPH_HOPS = 2
 GRAPH_MAX_RESULTS = 10

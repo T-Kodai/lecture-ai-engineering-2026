@@ -1,0 +1,16 @@
+$ uv run python -m app.agent --graph --trace "今回作ったRAGの実測平均応答時間と正答率は？"
+[model] gemini-3.5-flash-lite
+第1〜第3回の講義資料内には、今回作成されたRAGの実測平均応答時間や具体的な正答率についての記載はありません。
+
+講義資料（第2回・PDF p.13）では、LLMの出力が確率によって毎回変動するため、1回試しただけでは実際の正答率は分からず、同じ質問を複数回聞いて平均やばらつきを測る必要があるという考え方が説明されています（第2回・PDF p.13）。
+
+ご自身で作成されたRAGの性能を評価する際は、どのようなテスト用の質問（評価セット）を何回実行し、どのような基準で正解・不正解を判定したかを確認してみてください。
+
+--- trace ---
+[tool call]   search_graph({'query': '実測 平均応答時間 正答率 RAG'})
+[tool return] search_graph -> {"seeds": [{"page_id": "lec02-main-p013", "document_id": "lec02-main", "lecture": 2, "document_title": "基盤モデルの仕組み", "sec…
+[tool call]   search_graph({'query': 'RAG 実測 平均応答時間 正答率'})
+[tool return] search_graph -> {"seeds": [{"page_id": "lec02-main-p013", "document_id": "lec02-main", "lecture": 2, "document_title": "基盤モデルの仕組み", "sec…
+[time] 回答完了まで 5.16 秒（検索・埋め込みを含む）
+[usage] 入力 15,189 tokens / 出力 198 tokens / モデル応答 3 回
+[cost] 生成APIの推定コスト: $0.003953 USD（埋め込み・索引構築分は含まない）

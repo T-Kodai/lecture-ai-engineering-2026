@@ -16,7 +16,7 @@ import sqlite_vec
 
 from app.config import (
     EMBEDDING_DIMENSIONS, EMBEDDING_MAX_TOKENS, EMBEDDING_MODEL,
-    RAG_DB, RAG_DOCUMENT_IDS, RAG_SOURCE, RAG_TOP_K, RAG_TREE, get_api_key,
+    RAG_DB, RAG_DOCUMENT_IDS, RAG_NEIGHBOR_PAGES, RAG_SOURCE, RAG_TOP_K, RAG_TREE, get_api_key,
     RAG_GRAPH, GRAPH_START_K, GRAPH_HOPS, GRAPH_MAX_RESULTS,
 )
 
@@ -124,7 +124,7 @@ def open_index(path: Path):
         db.close()
 
 
-def search(query: str) -> list[dict]:
+def search_vector(query: str) -> list[dict]:
     """質問を埋め込み、近いページを最大RAG_TOP_K件返す。"""
     if not isinstance(query, str) or not query.strip():
         raise ValueError("検索語が空です。")
@@ -136,6 +136,57 @@ def search(query: str) -> list[dict]:
             FROM chunks ORDER BY distance, page_id LIMIT ?
         """, (sqlite_vec.serialize_float32(vector), RAG_TOP_K))
         return [dict(row) for row in rows]
+
+
+def add_neighbor_pages(hits: list[dict], pages: list[dict], window: int) -> list[dict]:
+    """検索で当たった各ページの前後 window ページの本文を足す（第5回 宿題・実装）。
+
+    - 前後は同じ資料の中のページ順でたどり、別の資料はまたがない
+    - 同じページは 1 回だけ入れる。検索で当たったページは前後としては入れず、当たった側として入れる
+    - 当たったページの前後を [前, 当たったページ, 後] の順に並べ、足したページには neighbor_of（どのページの前後か）を付ける
+    """
+    if window <= 0:
+        return hits
+    by_document = defaultdict(list)
+    for page in pages:
+        by_document[page["document_id"]].append(page)
+    position = {}
+    for document_pages in by_document.values():
+        document_pages.sort(key=lambda p: p["page"])
+        for i, page in enumerate(document_pages):
+            position[page["page_id"]] = (page["document_id"], i)
+
+    results, seen = [], set()
+    hit_ids = {hit["page_id"] for hit in hits}
+
+    def put(entry: dict) -> None:
+        if entry["page_id"] not in seen:
+            seen.add(entry["page_id"])
+            results.append(entry)
+
+    for hit in hits:
+        if hit["page_id"] not in position:  # 対象資料の外（索引だけにあるページ）は前後をたどらない
+            put(hit)
+            continue
+        document_id, i = position[hit["page_id"]]
+        document_pages = by_document[document_id]
+        for offset in [*range(-window, 0), 0, *range(1, window + 1)]:
+            j = i + offset
+            if not 0 <= j < len(document_pages):
+                continue
+            if offset == 0:
+                put(hit)
+            elif document_pages[j]["page_id"] not in hit_ids:
+                put({**document_pages[j], "neighbor_of": hit["page_id"], "offset": offset})
+    return results
+
+
+def search(query: str) -> list[dict]:
+    """ベクトル検索の結果を返す。RAG_NEIGHBOR_PAGES が 1 以上なら、当たったページの前後の本文も足す。"""
+    hits = search_vector(query)
+    if RAG_NEIGHBOR_PAGES <= 0:
+        return hits
+    return add_neighbor_pages(hits, load_pages(RAG_SOURCE), RAG_NEIGHBOR_PAGES)
 
 
 def search_graph(query: str) -> dict:
@@ -151,7 +202,7 @@ def search_graph(query: str) -> dict:
             adjacent[a].add(b)
             adjacent[b].add(a)
 
-    seeds = [hit for hit in search(query) if hit["page_id"] in pages][:min(GRAPH_START_K, GRAPH_MAX_RESULTS)]
+    seeds = [hit for hit in search_vector(query) if hit["page_id"] in pages][:min(GRAPH_START_K, GRAPH_MAX_RESULTS)]
     seed_ids = {seed["page_id"] for seed in seeds}
     results, candidates = [], {}
     for rank, seed in enumerate(seeds):
@@ -203,7 +254,8 @@ if __name__ == "__main__":
     parser.add_argument("query", help="調べたい内容")
     args = parser.parse_args()
     for i, result in enumerate(search(args.query), 1):
-        print(f"\n{'=' * 60}\n検索結果 {i}\n{'=' * 60}")
+        label = f"（{result['neighbor_of']} の前後ページ）" if "neighbor_of" in result else ""
+        print(f"\n{'=' * 60}\n検索結果 {i}{label}\n{'=' * 60}")
         print(f"講義: {result['document_title']}")
         print(f"章: {result['section']}")
         print(f"タイトル: {result['title']}")
