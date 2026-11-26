@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-11-26T11:14:36",
+  "runs": {
+    "as_is": {
+      "config": "app/mcp_servers.json",
+      "claude_code_version": "2.1.323",
+      "mcp_servers": [
+        {
+          "name": "glossary",
+          "status": "connected"
+        },
+        {
+          "name": "fetch",
+          "status": "connected"
+        }
+      ],
+      "mcp_tools": [
+        "mcp__fetch__fetch",
+        "mcp__glossary__search_glossary"
+      ],
+      "mcp_server_errors": [
+        {
+          "name": "aws",
+          "type": "url_missing_type",
+          "message": "Skipped — MCP server \"aws\" has a \"url\" but no \"type\"; add \"type\": \"http\" (or \"sse\" / \"ws\") to this entry"
+        }
+      ]
+    },
+    "with_type": {
+      "config": "lectures/06/results/homework/mcp_servers_claude_code.json",
+      "claude_code_version": "2.1.323",
+      "mcp_servers": [
+        {
+          "name": "glossary",
+          "status": "connected"
+        },
+        {
+          "name": "fetch",
+          "status": "connected"
+        },
+        {
+          "name": "aws",
+          "status": "connected"
+        }
+      ],
+      "mcp_tools": [
+        "mcp__aws__aws___get_regional_availability",
+        "mcp__aws__aws___list_regions",
+        "mcp__aws__aws___read_documentation",
+        "mcp__aws__aws___retrieve_skill",
+        "mcp__aws__aws___search_documentation",
+        "mcp__fetch__fetch",
+        "mcp__glossary__search_glossary"
+      ],
+      "mcp_server_errors": []
+    }
+  }
+}
